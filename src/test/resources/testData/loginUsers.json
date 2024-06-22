@@ -1,0 +1,21 @@
+{
+	"invalidUsername":{
+		
+		"username":"arvind",
+		"password":"secret_sauce"
+	},
+	
+	"invalidPassword":{
+
+		"username":"standard_user",
+		"password":"secret"
+		
+	},
+	
+	"validCredentials":{
+		
+		"username":"standard_user",
+		"password":"secret_sauce"
+	}
+	
+}
