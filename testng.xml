@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="com.saucelabs.listeners.Listeners"/>
 	</listeners>
-  <test thread-count="5" name="Test">
+  <test  name="Pixel_8">
 	  <parameter name="emulator" value="true"/>
 	  <parameter name="platformName" value="Android"/>
 	  <parameter name="deviceName" value="pixel_8"/>
@@ -15,4 +15,15 @@
       
 </classes>
   </test> <!-- Test -->
+   <test name="Test">
+	  <parameter name="emulator" value="true"/>
+	  <parameter name="platformName" value="Android"/>
+	  <parameter name="deviceName" value="pixel_8"/>
+      <parameter name="udid" value="emulator-5556"/>
+    <classes>
+      <class name="com.saucelabs.tests.LoginTests"/>
+      <class name="com.saucelabs.tests.ProductTests"/>
+      
+</classes>
+  </test> 
 </suite> <!-- Suite -->
