@@ -16,7 +16,7 @@ public class SettingsPage extends BasePage {
 	
 	public LoginPage clicklogout()
 	{
-		click(WaitStrategy.NONE,logoutBtn);
+		click(WaitStrategy.NONE,logoutBtn,"Logout Button");
 		return new LoginPage();
 	}
 	

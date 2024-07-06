@@ -16,7 +16,7 @@ public final class FrameworkConstants {
 	}
 
 
-	private static final int EXPLICITWAIT=10;
+	private static final int EXPLICITWAIT=20;
 	 
 	 
 	 public static String getTestdata() {

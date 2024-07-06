@@ -1,9 +1,11 @@
 package com.saucelabs.factories;
 
 import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.saucelabs.constants.FrameworkConstants;
 import com.saucelabs.driver.DriverManager;
 import com.saucelabs.enums.WaitStrategy;

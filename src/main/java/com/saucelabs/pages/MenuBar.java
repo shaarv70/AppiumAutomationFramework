@@ -17,7 +17,7 @@ public class MenuBar extends BasePage {
 	
 	public SettingsPage clickMenuIcon()
 	{
-		click(WaitStrategy.NONE,menuIcon);
+		click(WaitStrategy.NONE,menuIcon,"Hamburger");
 		return new SettingsPage();
 	}
 	

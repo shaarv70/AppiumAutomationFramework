@@ -1,6 +1,6 @@
 package com.saucelabs.listeners;
 
-import java.util.Arrays;
+import java.io.IOException;
 import java.util.Objects;
 
 import org.testng.ISuite;
@@ -8,6 +8,11 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import com.saucelabs.enums.Config;
+import com.saucelabs.utils.PropertyUtils;
+import com.saucelabs.utils.ScreenshotUtils;
+import com.saucelabs.utils.VideoUtils;
 
 public class Listeners implements ITestListener, ISuiteListener{
 
@@ -31,8 +36,7 @@ public class Listeners implements ITestListener, ISuiteListener{
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestSuccess(result);
+	
 	}
 
 	@Override
@@ -41,11 +45,26 @@ public class Listeners implements ITestListener, ISuiteListener{
 		if(Objects.nonNull(result.getThrowable()))
 		{
 			 result.getThrowable().printStackTrace();
-				
 		}
-		    		
-		}
+		
+	    if(PropertyUtils.getProperty(Config.SAVESCREENSHOTS).equals("true")) {
+		try {
+			ScreenshotUtils.getScreenshot(result);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}}
 	
+	 if(PropertyUtils.getProperty(Config.SAVEVIDEOS).equals("true")) {
+			try {
+				VideoUtils.getVideo(result);
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}}}
+	
+		
+		
 
 	@Override
 	public void onTestSkipped(ITestResult result) {

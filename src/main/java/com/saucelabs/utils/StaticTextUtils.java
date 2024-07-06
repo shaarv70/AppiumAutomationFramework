@@ -18,11 +18,14 @@ import com.saucelabs.constants.FrameworkConstants;
 public class StaticTextUtils {
 	
 	private StaticTextUtils() {}
-	private static final Map<String, String> stringMap = new HashMap<>();
+	
+	private static final Map<String,String> MYMAP= new HashMap<>();
+	
 	
     static {
 	
 	try {
+		
     	//Get Document Builder
 	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
@@ -44,10 +47,12 @@ public class StaticTextUtils {
 		 {
 		    Element eElement = (Element) node;
 		    // Store each element key value in map
-		    stringMap.put(eElement.getAttribute("name"), eElement.getTextContent());
+		    MYMAP.put(eElement.getAttribute("name"), eElement.getTextContent());
 		 }
 		
 		}
+	
+	
 	}
 		catch(Exception e)
 		{
@@ -57,14 +62,14 @@ public class StaticTextUtils {
 		}
 		
 
-      public static String getStaticText(String key)
+      public synchronized static String getStaticText(String key)
       {
     	  if(Objects.isNull(key))
     	  {
     		  throw new RuntimeException("key not found");
     	  }
      
-         return stringMap.get(key);
+         return MYMAP.get(key);
       
       
       }

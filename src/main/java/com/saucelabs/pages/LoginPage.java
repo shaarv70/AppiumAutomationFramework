@@ -31,19 +31,19 @@ public final class LoginPage extends BasePage {
 	 
 	 public LoginPage setUsername(String name)
 	 {
-		sendkeys(WaitStrategy.VISIBILITY,username,name);
+		sendkeys(WaitStrategy.VISIBILITY,username,name,"username");
 		return this;
 	 }
 	 
 	 public LoginPage setPassword(String pass)
 	 {
-		 sendkeys(WaitStrategy.NONE,password,pass);
+		 sendkeys(WaitStrategy.NONE,password,pass,"pasword");
 		 return this;
 	 }
 	 
 	 public LoginPage clickLogin() 
 	 {
-		 click(WaitStrategy.VISIBILITY, lgnBtn);
+		 click(WaitStrategy.VISIBILITY, lgnBtn,"Login Button");
 		 return this;
 	 }
 	 
@@ -51,7 +51,7 @@ public final class LoginPage extends BasePage {
 	public void assertLoginNotification(String exp)
 	 {
 		String actual= mess.getText();
-		assertMess(actual, exp);
+		assertFunction(actual, exp);
 	 }
 	
 	public ProductsPage assertProductPageTitle()

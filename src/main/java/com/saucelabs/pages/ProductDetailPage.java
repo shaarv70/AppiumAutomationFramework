@@ -22,21 +22,21 @@ public class ProductDetailPage extends MenuBar {
 	
 	public ProductDetailPage assertProductNameonDetailsPage(String name)
 	{
-		assertMess(productName.getText(), name);
+		assertFunction(productName.getText(), name);
 		return this;
 	}
 	
 	public ProductDetailPage assertProductDescription(String desc)
 	{
-		assertMess(productDesc.getText(),desc);
+		assertFunction(productDesc.getText(),desc);
 		return this;
 		
 	}
 	
 	public ProductDetailPage assertProductPrice(String price)
 	{
-		scroll("ADD TO CART");
-		assertMess(productPrice.getText(),price);
+		scroll("ADD TO CART","Product Price");
+		assertFunction(productPrice.getText(),price);
 		return this;
 		
 	}

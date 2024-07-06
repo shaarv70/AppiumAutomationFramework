@@ -21,26 +21,26 @@ public class ProductsPage extends MenuBar {
 	
 	public ProductsPage assertPageTitle(String exp)
 	{
-	   assertMess(productsPageTitle.getText(), exp);
+		assertFunction(productsPageTitle.getText(), exp);
 	   return this;
 	}
 	
 	public ProductsPage assertProductName(String name)
 	{
-		assertMess(productName.getText(), name);
+		assertFunction(productName.getText(), name);
 		return this;
 	}
 	
 	public ProductsPage assertProductPrice(String price)
 	{
-		assertMess(productPrice.getText(),price);
+		assertFunction(productPrice.getText(),price);
 		return this;
 		
 	}
 	
 	public ProductDetailPage clickProduct()
 	{
-		click(WaitStrategy.NONE,productName);
+		click(WaitStrategy.NONE,productName,"Product");
 		return new ProductDetailPage();
 		
 	}

@@ -2,18 +2,12 @@ package com.saucelabs.driver;
 
 import java.util.Objects;
 
-import org.openqa.selenium.WebDriver;
-
 import io.appium.java_client.AppiumDriver;
 
 public class DriverManager {
 	
 	
 
-	private DriverManager()
-	{
-
-	}
 
 	private static ThreadLocal<AppiumDriver> dr= new ThreadLocal<>();
 
