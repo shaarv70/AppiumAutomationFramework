@@ -11,6 +11,14 @@
       <parameter name="udid" value="emulator-5554"/>
     <classes>
       <class name="com.saucelabs.tests.LoginTests"/>
+    </classes>
+  </test>
+  <test  name="Pixel_8_copy">
+	  <parameter name="emulator" value="true"/>
+	  <parameter name="platformName" value="Android"/>
+	  <parameter name="deviceName" value="pixel_8"/>
+      <parameter name="udid" value="emulator-5556"/>
+    <classes>
       <class name="com.saucelabs.tests.ProductTests"/>
     </classes>
   </test>
