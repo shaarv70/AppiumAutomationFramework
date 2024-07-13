@@ -1,6 +1,8 @@
 package com.saucelabs.tests;
 
 
+import java.util.Map;
+
 import org.testng.annotations.Test;
 
 import com.saucelabs.pages.BaseTest;
