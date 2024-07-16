@@ -1,0 +1,20 @@
+2024-07-16 19:07:21:708 [Appium] Welcome to Appium v2.5.4
+2024-07-16 19:07:21:711 [Appium] Non-default server args:
+2024-07-16 19:07:21:712 [Appium] { sessionOverride: true }
+2024-07-16 19:07:21:713 [Appium] The autodetected Appium home path: C:\Users\arvin\.appium
+2024-07-16 19:07:21:713 [Appium] Attempting to load driver uiautomator2...
+2024-07-16 19:07:21:716 [Appium] Requiring driver at C:\Users\arvin\.appium\node_modules\appium-uiautomator2-driver\build\index.js
+2024-07-16 19:07:22:651 [Appium] AndroidUiautomator2Driver has been successfully loaded in 0.937s
+2024-07-16 19:07:22:705 [Appium] Appium REST http interface listener started on http://0.0.0.0:4723
+2024-07-16 19:07:22:709 [Appium] You can provide the following URLs in your client code to connect to this server:
+2024-07-16 19:07:22:710 [Appium] 	http://192.168.1.8:4723/
+2024-07-16 19:07:22:710 [Appium] 	http://127.0.0.1:4723/ (only accessible from the same host)
+2024-07-16 19:07:22:710 [Appium] Available drivers:
+2024-07-16 19:07:22:710 [Appium]   - uiautomator2@3.1.0 (automationName 'UiAutomator2')
+2024-07-16 19:07:22:711 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2024-07-16 19:07:22:829 [HTTP] --> GET /status
+2024-07-16 19:07:22:829 [HTTP] {}
+2024-07-16 19:07:22:833 [AppiumDriver@38f8] Calling AppiumDriver.getStatus() with args: []
+2024-07-16 19:07:22:837 [AppiumDriver@38f8] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.5.4"}}
+2024-07-16 19:07:22:853 [HTTP] <-- GET /status 200 18 ms - 110
+2024-07-16 19:07:22:854 [HTTP] 

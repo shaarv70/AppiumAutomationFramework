@@ -1,0 +1,38 @@
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:29.235 ProductTests:31 - *****************Starting validateProductonProductDetailsPage test**********************
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:30.188 BasePage:42 - Entering the username
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:31.116 BasePage:42 - Entering the pasword
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:31.725 BasePage:36 - Clicking on Login Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:33.845 BasePage:36 - Clicking on Product
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:38.113 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:38.349 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:38.350 BasePage:49 - Doing Scrolling for Product Price
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:42.582 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:42.583 BasePage:36 - Clicking on Hamburger
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:42.975 BasePage:36 - Clicking on Logout Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:50.079 ProductTests:18 - *****************Starting validateProductonProductsPage test**********************
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:50.086 BasePage:42 - Entering the username
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:54.375 BasePage:42 - Entering the pasword
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:54.906 BasePage:36 - Clicking on Login Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:57.231 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:57.456 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:57.457 BasePage:36 - Clicking on Hamburger
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:05:57.877 BasePage:36 - Clicking on Logout Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:38.431 ProductTests:31 - *****************Starting validateProductonProductDetailsPage test**********************
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:39.514 BasePage:42 - Entering the username
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:42.465 BasePage:42 - Entering the pasword
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:43.550 BasePage:36 - Clicking on Login Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:45.390 BasePage:36 - Clicking on Product
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:48.432 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:48.743 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:48.744 BasePage:49 - Doing Scrolling for Product Price
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:52.495 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:52.496 BasePage:36 - Clicking on Hamburger
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:52.822 BasePage:36 - Clicking on Logout Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:59.612 ProductTests:18 - *****************Starting validateProductonProductsPage test**********************
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:14:59.616 BasePage:42 - Entering the username
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:15:00.816 BasePage:42 - Entering the pasword
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:15:01.591 BasePage:36 - Clicking on Login Button
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:15:04.153 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:15:04.360 BasePage:57 - Performing Assertion
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:15:04.361 BasePage:36 - Clicking on Hamburger
+[logsemulator-5554_pixel_8 INFO ] 2024-07-17 01:15:04.976 BasePage:36 - Clicking on Logout Button

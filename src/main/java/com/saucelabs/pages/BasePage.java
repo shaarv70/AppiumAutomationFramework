@@ -2,6 +2,8 @@ package com.saucelabs.pages;
 
 
 
+import static com.saucelabs.utils.LoggingUtils.log;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
@@ -15,7 +17,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 
 
-public class BasePage extends BaseTest {
+public class BasePage {
 
 
       
@@ -31,20 +33,20 @@ public class BasePage extends BaseTest {
 	protected void click(WaitStrategy wait,WebElement ele,String eleName)
 	{
 
-	  log.info("Clicking on "+eleName); 
+	    log().info("Clicking on "+eleName); 
 		ExplicitWaitFactory.explicitWait(wait,ele).click();
 	}
 
 	protected void sendkeys(WaitStrategy wait,WebElement ele,String text, String eleName)
 	{
-		log.info("Entering the "+eleName); 
+		log().info("Entering the "+eleName); 
 		ExplicitWaitFactory.explicitWait(wait,ele).sendKeys(text);
 	}
 
 	protected void scroll(String ele, String eleName)
 	{
 
-		log.info("Doing Scrolling for "+eleName);
+		log().info("Doing Scrolling for "+eleName);
 		DriverManager.getDriver().findElement(AppiumBy.androidUIAutomator
 				("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" +ele +"\"))"));
 	}
@@ -52,7 +54,7 @@ public class BasePage extends BaseTest {
 
 	protected void assertFunction(String actual,String expected)
 	{
-		log.info("Performing Assertion");  
+		log().info("Performing Assertion");  
 		SoftAssert s= new SoftAssert();
 		s. assertEquals(actual,expected);
 		s.assertAll();
