@@ -1,10 +1,11 @@
 package com.saucelabs.tests;
 
 
-import java.util.Map;
 import static com.saucelabs.utils.LoggingUtils.log;
+
 import org.testng.annotations.Test;
 
+import com.saucelabs.annotations.FrameworkAnnotation;
 import com.saucelabs.pages.LoginPage;
 import com.saucelabs.utils.JsonUtils;
 import com.saucelabs.utils.StaticTextUtils;
@@ -13,8 +14,8 @@ public final class LoginTests extends BaseTest{
 	
 	
 	
-	
-	
+	@FrameworkAnnotation(author = {"Arvind"})
+	@Test
 	public  void invalidUsername() 
 	{
 	   log().info("*****************Starting invalidUsername test**********************");
@@ -23,6 +24,7 @@ public final class LoginTests extends BaseTest{
 		    assertLoginNotification(StaticTextUtils.getStaticText("err_invalid_username_password"));
 	}
 
+	@FrameworkAnnotation(author = {"Harish"})
 	@Test
 	public void invalidPassword() 
 	{
@@ -32,6 +34,7 @@ public final class LoginTests extends BaseTest{
 	    assertLoginNotification(StaticTextUtils.getStaticText("err_invalid_username_password"));
 	}
 	
+	@FrameworkAnnotation(author = {"Arvind"})
 	@Test
 	public  void validCredentials() 
 	{

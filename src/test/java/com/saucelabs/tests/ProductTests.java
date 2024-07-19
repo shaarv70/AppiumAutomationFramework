@@ -4,6 +4,7 @@ import static com.saucelabs.utils.LoggingUtils.log;
 
 import org.testng.annotations.Test;
 
+import com.saucelabs.annotations.FrameworkAnnotation;
 import com.saucelabs.pages.LoginPage;
 import com.saucelabs.utils.JsonUtils;
 import com.saucelabs.utils.StaticTextUtils;
@@ -11,7 +12,7 @@ import com.saucelabs.utils.StaticTextUtils;
 public final class ProductTests extends BaseTest {
 
 
-
+	@FrameworkAnnotation(author = {"Harish"})
 	@Test
 	public  void validateProductonProductsPage()
 	{
@@ -24,7 +25,7 @@ public final class ProductTests extends BaseTest {
 
 	}
 
-
+	@FrameworkAnnotation(author = {"Arvind"})
 	@Test
 	public  void validateProductonProductDetailsPage() {
 

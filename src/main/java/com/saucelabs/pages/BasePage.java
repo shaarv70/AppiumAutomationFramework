@@ -11,6 +11,7 @@ import org.testng.asserts.SoftAssert;
 import com.saucelabs.driver.DriverManager;
 import com.saucelabs.enums.WaitStrategy;
 import com.saucelabs.factories.ExplicitWaitFactory;
+import com.saucelabs.reports.ExtentLogger;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -34,12 +35,14 @@ public class BasePage {
 	{
 
 	    log().info("Clicking on "+eleName); 
+	    ExtentLogger.pass(eleName+" clicked",true);
 		ExplicitWaitFactory.explicitWait(wait,ele).click();
 	}
 
 	protected void sendkeys(WaitStrategy wait,WebElement ele,String text, String eleName)
 	{
 		log().info("Entering the "+eleName); 
+		ExtentLogger.pass("Entered the "+ eleName, true );
 		ExplicitWaitFactory.explicitWait(wait,ele).sendKeys(text);
 	}
 
@@ -47,6 +50,7 @@ public class BasePage {
 	{
 
 		log().info("Doing Scrolling for "+eleName);
+		ExtentLogger.pass("Doing scrooling for the "+ eleName, true );
 		DriverManager.getDriver().findElement(AppiumBy.androidUIAutomator
 				("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" +ele +"\"))"));
 	}
@@ -55,6 +59,7 @@ public class BasePage {
 	protected void assertFunction(String actual,String expected)
 	{
 		log().info("Performing Assertion");  
+		ExtentLogger.pass("Performing Assertion",true );
 		SoftAssert s= new SoftAssert();
 		s. assertEquals(actual,expected);
 		s.assertAll();

@@ -12,6 +12,7 @@ import java.time.Duration;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.google.common.io.ByteStreams;
+import com.saucelabs.constants.FrameworkConstants;
 import com.saucelabs.enums.Config;
 
 import io.appium.java_client.AppiumDriver;
@@ -68,9 +69,10 @@ public class DriverFactory {
 	public static AppiumDriverLocalService getAppiumService()//Another utlity if we want to run appium server with certain properties
 	{
 		return  AppiumDriverLocalService.buildService(new AppiumServiceBuilder().
-				usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe")).
-				withAppiumJS(new File("C:\\Users\\arvin\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).
-				usingPort(4723).withTimeout(Duration.ofSeconds(5)).
+				usingDriverExecutable(new File(FrameworkConstants.getDriverexecutable())).
+				withAppiumJS(new File(FrameworkConstants.getAppiumjs())).
+				usingPort(4723).
+				withTimeout(Duration.ofSeconds(10)).
 				withArgument(GeneralServerFlag.SESSION_OVERRIDE).
 				withLogOutput(ByteStreams.nullOutputStream()).
 			    withLogFile(new File("ServerLogs\\server.log")));

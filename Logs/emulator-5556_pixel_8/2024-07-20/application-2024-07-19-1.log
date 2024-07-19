@@ -1,0 +1,9 @@
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:27.403 LoginTests:31 - *****************Starting invalidPassword test**********************
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:27.702 BasePage:44 - Entering the username
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:34.390 BasePage:44 - Entering the pasword
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:36.574 BasePage:37 - Clicking on Login Button
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:45.670 LoginTests:21 - *****************Starting invalidUsername test**********************
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:45.673 BasePage:44 - Entering the username
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:52.521 BasePage:44 - Entering the pasword
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:53.790 BasePage:37 - Clicking on Login Button
+[C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-19 23:59:56.913 BasePage:61 - Performing Assertion

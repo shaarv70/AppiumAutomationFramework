@@ -13,7 +13,10 @@ public class DriverManager {
 
 	public static AppiumDriver getDriver()
 	{
-		return dr.get();
+		if(Objects.nonNull(dr))
+		{return dr.get();
+		}
+	  return null;	
 	}
 
 	static void setDriver(AppiumDriver ref ) {
