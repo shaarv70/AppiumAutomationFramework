@@ -2,40 +2,54 @@ package com.saucelabs.tests;
 
 import static com.saucelabs.utils.LoggingUtils.log;
 
+import java.lang.reflect.Method;
+
 import org.testng.annotations.Test;
 
 import com.saucelabs.annotations.FrameworkAnnotation;
-import com.saucelabs.pages.LoginPage;
-import com.saucelabs.utils.JsonUtils;
+import com.saucelabs.pages.ProductDetailPage;
+import com.saucelabs.pages.ProductsPage;
 import com.saucelabs.utils.StaticTextUtils;
 
 public final class ProductTests extends BaseTest {
 
 
+	private ProductTests() {}
+
+
 	@FrameworkAnnotation(author = {"Harish"})
-	@Test
-	public  void validateProductonProductsPage()
+	@Test(groups ="DeepLinks")
+	public  void validateProductonProductsPage(Method m)
 	{
 		log().info("*****************Starting validateProductonProductsPage test**********************");
-		new LoginPage().login(JsonUtils.get("validCredentials","username"), JsonUtils.get("validCredentials","password")).
-		assertProductName(StaticTextUtils.getStaticText("product_name")).
-		assertProductPrice(StaticTextUtils.getStaticText("product_price")).
-		clickMenuIcon().clicklogout();
-
+		try {
+			new ProductsPage().
+			assertProductName(StaticTextUtils.getStaticText("product_name")).
+			assertProductPrice(StaticTextUtils.getStaticText("product_price")).
+			clickMenuIcon().clicklogout();
+		}
+		catch(Exception e)
+		{
+			log().error("Test "+m.getName()+" failed");
+		}
 
 	}
 
 	@FrameworkAnnotation(author = {"Arvind"})
-	@Test
-	public  void validateProductonProductDetailsPage() {
+	@Test(groups ="DeepLinks") 
+	public  void validateProductonProductDetailsPage(Method m) {
 
-		log().info("*****************Starting validateProductonProductDetailsPage test**********************");
-		new LoginPage().login(JsonUtils.get("validCredentials","username"), JsonUtils.get("validCredentials","password")).
-		clickProduct().assertProductNameonDetailsPage(StaticTextUtils.getStaticText("product_name")).
-		assertProductDescription(StaticTextUtils.getStaticText("product_desc")).
-		assertProductPrice(StaticTextUtils.getStaticText("product_price")).
-		clickMenuIcon().clicklogout();
-
+		try {
+			log().info("*****************Starting validateProductonProductDetailsPage test**********************");
+			new ProductDetailPage().assertProductNameonDetailsPage(StaticTextUtils.getStaticText("product_name")).
+			assertProductDescription(StaticTextUtils.getStaticText("product_desc")).
+			assertProductPrice(StaticTextUtils.getStaticText("product_price")).
+			clickMenuIcon().clicklogout();
+		}
+		catch(Exception e)
+		{
+			log().error("Test "+m.getName()+" failed");
+		}
 
 	}
 

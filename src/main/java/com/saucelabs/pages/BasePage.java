@@ -54,6 +54,11 @@ public class BasePage {
 		DriverManager.getDriver().findElement(AppiumBy.androidUIAutomator
 				("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" +ele +"\"))"));
 	}
+	
+	protected String getText(WaitStrategy wait,WebElement ele)
+	{
+		return ExplicitWaitFactory.explicitWait(wait,ele).getText();
+	}
 
 
 	protected void assertFunction(String actual,String expected)
@@ -65,6 +70,8 @@ public class BasePage {
 		s.assertAll();
 
 	}
+	
+	
 
 
 }

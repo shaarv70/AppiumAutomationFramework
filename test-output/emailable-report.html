@@ -9,119 +9,22 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Pixel_8_copy</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">67,040</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Pixel_8</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">75,669</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">4</th><th class="num">142,709</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Pixel_8_copy</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">87,898</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Pixel_8</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">88,208</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">10</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">176,106</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Pixel_8_copy &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.saucelabs.tests.LoginTests</td><td><a href="#m0">invalidPassword</a></td><td rowspan="1">1721414952652</td><td rowspan="1">19011</td></tr><tr class="failedeven"><td><a href="#m1">invalidUsername</a></td><td rowspan="1">1721414978180</td><td rowspan="1">12712</td></tr><tr><th colspan="4">Pixel_8_copy &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.saucelabs.tests.LoginTests</td><td><a href="#m2">validCredentials</a></td><td rowspan="1">1721414995022</td><td rowspan="1">14333</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Pixel_8 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.saucelabs.tests.ProductTests</td><td><a href="#m3">validateProductonProductDetailsPage</a></td><td rowspan="1">1721414952748</td><td rowspan="1">22531</td></tr><tr class="failedeven"><td><a href="#m4">validateProductonProductsPage</a></td><td rowspan="1">1721414991515</td><td rowspan="1">22279</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Pixel_8_copy &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.saucelabs.tests.LoginTests</td><td><a href="#m0">invalidPassword</a></td><td rowspan="1">1721757458203</td><td rowspan="1">11775</td></tr><tr class="passedeven"><td><a href="#m1">invalidUsername</a></td><td rowspan="1">1721757471912</td><td rowspan="1">8363</td></tr><tr class="passedeven"><td><a href="#m2">validCredentials</a></td><td rowspan="1">1721757481903</td><td rowspan="1">12528</td></tr><tr class="passedodd"><td rowspan="2">com.saucelabs.tests.ProductTests</td><td><a href="#m3">validateProductonProductDetailsPage</a></td><td rowspan="1">1721757499177</td><td rowspan="1">27941</td></tr><tr class="passedodd"><td><a href="#m4">validateProductonProductsPage</a></td><td rowspan="1">1721757531379</td><td rowspan="1">7880</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Pixel_8 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.saucelabs.tests.LoginTests</td><td><a href="#m5">invalidPassword</a></td><td rowspan="1">1721757458190</td><td rowspan="1">11741</td></tr><tr class="passedeven"><td><a href="#m6">invalidUsername</a></td><td rowspan="1">1721757471384</td><td rowspan="1">8560</td></tr><tr class="passedeven"><td><a href="#m7">validCredentials</a></td><td rowspan="1">1721757481691</td><td rowspan="1">12816</td></tr><tr class="passedodd"><td rowspan="2">com.saucelabs.tests.ProductTests</td><td><a href="#m8">validateProductonProductDetailsPage</a></td><td rowspan="1">1721757499355</td><td rowspan="1">27898</td></tr><tr class="passedodd"><td><a href="#m9">validateProductonProductsPage</a></td><td rowspan="1">1721757531534</td><td rowspan="1">7930</td></tr></tbody>
 </table>
-<h2>Pixel_8_copy</h2><h3 id="m0">com.saucelabs.tests.LoginTests#invalidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [Username and password do not match any user in this servic] but found [Username and password do not match any user in this service.]
-	at com.saucelabs.pages.BasePage.assertFunction(BasePage.java:65)
-	at com.saucelabs.pages.LoginPage.assertLoginNotification(LoginPage.java:54)
-	at com.saucelabs.tests.LoginTests.invalidPassword(LoginTests.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.saucelabs.tests.LoginTests#invalidUsername</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [Username and password do not match any user in this servic] but found [Username and password do not match any user in this service.]
-	at com.saucelabs.pages.BasePage.assertFunction(BasePage.java:65)
-	at com.saucelabs.pages.LoginPage.assertLoginNotification(LoginPage.java:54)
-	at com.saucelabs.tests.LoginTests.invalidUsername(LoginTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.saucelabs.tests.LoginTests#validCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Pixel_8</h2><h3 id="m3">com.saucelabs.tests.ProductTests#validateProductonProductDetailsPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //*[@text=&quot;Sauce Labs Backpack&quot;]})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$dR3SZV9u.click(Unknown Source)
-	at com.saucelabs.pages.BasePage.click(BasePage.java:39)
-	at com.saucelabs.pages.ProductsPage.clickProduct(ProductsPage.java:43)
-	at com.saucelabs.tests.ProductTests.validateProductonProductDetailsPage(ProductTests.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7cb4ea21 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[@text=&quot;Sauce Labs Backpack&quot;]})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 31 more
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.saucelabs.tests.ProductTests#validateProductonProductsPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, findElement {value=test-Password, using=accessibility id}]
-Capabilities {appium:adv: pixel_8, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adv: pixel_8, automationName: UiAutomator2, deviceName: pixel_8, newCommandTimeout: 400, platformName: ANDROID, udid: emulator-5556}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5556, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5556, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 400, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:statBarHeight: 132, appium:takesScreenshot: true, appium:udid: emulator-5556, appium:viewportRect: {height: 2268, left: 0, top: 132, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$dR3SZV9u.sendKeys(Unknown Source)
-	at com.saucelabs.pages.BasePage.sendkeys(BasePage.java:46)
-	at com.saucelabs.pages.LoginPage.setPassword(LoginPage.java:40)
-	at com.saucelabs.pages.LoginPage.login(LoginPage.java:65)
-	at com.saucelabs.tests.ProductTests.validateProductonProductsPage(ProductTests.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pixel_8_copy</h2><h3 id="m0">com.saucelabs.tests.LoginTests#invalidPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.LoginTests.invalidPassword(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.saucelabs.tests.LoginTests#invalidUsername</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.LoginTests.invalidUsername(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.saucelabs.tests.LoginTests#validCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.LoginTests.validCredentials(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.saucelabs.tests.ProductTests#validateProductonProductDetailsPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.ProductTests.validateProductonProductDetailsPage(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.saucelabs.tests.ProductTests#validateProductonProductsPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.ProductTests.validateProductonProductsPage(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pixel_8</h2><h3 id="m5">com.saucelabs.tests.LoginTests#invalidPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.LoginTests.invalidPassword(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.saucelabs.tests.LoginTests#invalidUsername</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.LoginTests.invalidUsername(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.saucelabs.tests.LoginTests#validCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.LoginTests.validCredentials(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.saucelabs.tests.ProductTests#validateProductonProductDetailsPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.ProductTests.validateProductonProductDetailsPage(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.saucelabs.tests.ProductTests#validateProductonProductsPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.saucelabs.tests.ProductTests.validateProductonProductsPage(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -9,7 +9,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.saucelabs.constants.FrameworkConstants;
-import com.saucelabs.listeners.Listeners;
+import com.saucelabs.exceptions.ExtentReportInvocationFailedException;
 import com.saucelabs.utils.TestPropertiesUtils;
 
 
@@ -21,16 +21,23 @@ public final class ExtentReport {
 
 	public static void initReports() 
 	{
-		if(Objects.isNull(extent)) {
+		try {
+			if(Objects.isNull(extent)) {
 
-			extent = new ExtentReports();
-			ExtentSparkReporter spark= new ExtentSparkReporter(FrameworkConstants.getNEWFILEPATH());
-			extent.attachReporter(spark);
-			spark.config().setTheme(Theme.STANDARD);
-			spark.config().setDocumentTitle("APPIUM Report");
-			spark.config().setReportName("Automation Report");
+				extent = new ExtentReports();
+				ExtentSparkReporter spark= new ExtentSparkReporter(FrameworkConstants.getNEWFILEPATH());
+				extent.attachReporter(spark);
+				spark.config().setTheme(Theme.STANDARD);
+				spark.config().setDocumentTitle("APPIUM Report");
+				spark.config().setReportName("Automation Report");
 
-		}}
+			}}
+		catch(Exception e)
+		{
+			throw new ExtentReportInvocationFailedException("Failed to setup Extent Reort");
+		}
+	}
+
 
 
 	public static void flushReports() 
@@ -70,7 +77,7 @@ public final class ExtentReport {
 
 	public static void addCategory()
 	{
-		String udid=TestPropertiesUtils.getCONFIGMAP().get("udid");
+
 		ExtentManager.getTest().assignCategory(TestPropertiesUtils.getCONFIGMAP().get("udid"));
 
 	}

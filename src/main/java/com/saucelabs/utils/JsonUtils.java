@@ -9,14 +9,16 @@ import java.util.Objects;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.saucelabs.constants.FrameworkConstants;
+import com.saucelabs.exceptions.DataLoadingFailedException;
+import com.saucelabs.exceptions.KeyNotFoundException;
 
 
 
-public class JsonUtils {
+public final class JsonUtils {
 	
 	private JsonUtils() {}
 	
-	private  static Map<String,Map<String,String>> CONFIGMAP= new HashMap<String, Map<String,String>>();
+	private  static Map<String,Map<String,String>> CONFIGMAP= new HashMap<>();
 	
 	
 
@@ -32,8 +34,8 @@ public class JsonUtils {
 		
 		catch (IOException e) {
 
-			e.printStackTrace();
-		    System.exit(0);
+			throw new DataLoadingFailedException("Failed to load JSON data",e);
+		  
 		}
 
 
@@ -41,15 +43,15 @@ public class JsonUtils {
 
 	
 	
-	public synchronized static String get(String key,String key1) 
+	public static synchronized String get(String key,String childKey) 
 	{
 		if(Objects.isNull(key))
 		{
-			throw new RuntimeException("key not found");
+			throw new KeyNotFoundException("JSON parent key not found : "+key);
 		}
 	
 	
-		return CONFIGMAP.get(key).get(key1);
+		return CONFIGMAP.get(key).get(childKey);
 	}
 	
 	

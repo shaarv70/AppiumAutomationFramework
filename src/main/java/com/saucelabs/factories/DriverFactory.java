@@ -8,12 +8,15 @@ import java.net.MalformedURLException;
 import java.net.ServerSocket;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.google.common.io.ByteStreams;
 import com.saucelabs.constants.FrameworkConstants;
+import com.saucelabs.driver.DriverManager;
 import com.saucelabs.enums.Config;
+import com.saucelabs.exceptions.DriverInvocationFailedException;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -23,11 +26,11 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 
 
-public class DriverFactory {
+public final  class DriverFactory {
+	
+	
 	
 	private DriverFactory() {}
-	
-	
 	
 	
 	public static AppiumDriver initialize(String emul,String platformname, String devicename, String udid)
@@ -60,11 +63,19 @@ public class DriverFactory {
 		}
 		catch (NullPointerException | MalformedURLException e)
 		{
-			e.printStackTrace();
+			throw new DriverInvocationFailedException("Failed to invoke driver" , e);
 		}
 
 		return driver;
     }
+	
+	public static void initialize(String url){
+		
+		HashMap<String,String> deepUrl= new HashMap<>();
+		deepUrl.put("url", url);
+		deepUrl.put("package",getProperty(Config.APPPACKAGE));
+		DriverManager.getDriver().executeScript("mobile:deepLink", deepUrl);
+	}
 	
 	public static AppiumDriverLocalService getAppiumService()//Another utlity if we want to run appium server with certain properties
 	{
@@ -83,6 +94,7 @@ public class DriverFactory {
 		return AppiumDriverLocalService.buildDefaultService();
 	}
 	
+	
 	public static boolean checkIfAppiumServerIsRunnning(int port) throws Exception {
 	    boolean isAppiumServerRunning = false;
 	    ServerSocket socket;
@@ -96,6 +108,9 @@ public class DriverFactory {
 	    }
 	    return isAppiumServerRunning;
 	}
+	
+	
+	
 
 	
 	

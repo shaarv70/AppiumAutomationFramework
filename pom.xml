@@ -3,7 +3,24 @@
   <groupId>org.arvindsharma</groupId>
   <artifactId>ApppiumAutomationFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+  
+   <properties>
+        <java.client.version>9.2.2</java.client.version>
+        <testng.version>7.8.0</testng.version>
+        <jackson.version>2.17.1</jackson.version>
+        <extent.report.version>5.1.1</extent.report.version>
+        <commons-codec.version>1.17.0</commons-codec.version>
+        <log4j-slf4j2-impl.version>2.20.0</log4j-slf4j2-impl.version>
+        <!-- plugins versions -->
+        <maven.compiler.version>3.11.0</maven.compiler.version>
+        <maven.dependency.version>3.6.0</maven.dependency.version>
+        <maven.jar.version>3.3.0</maven.jar.version>
+        <maven.surefire.version>3.1.2</maven.surefire.version>
+        <maven.resources.plugin>3.3.1</maven.resources.plugin>
+        <maven.antrun.plugin>3.0.0</maven.antrun.plugin>
+        <!-- output directory -->
+        <package.directory>${project.build.directory}/appium-resources</package.directory>
+ </properties>
 
 <dependencies>
 	
@@ -11,66 +28,198 @@
 <dependency>
     <groupId>io.appium</groupId>
     <artifactId>java-client</artifactId>
-    <version>9.2.2</version>
+    <version>${java.client.version}</version>
 </dependency>
-
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.7.1</version>
-    <scope>test</scope>
+    <version>${testng.version}</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
-    <version>2.17.1</version>
+    <version>${jackson.version}</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.json/json -->
-<dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20240303</version>
-</dependency>
-
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>5.1.1</version>
-   
+    <version>${extent.report.version}</version>
 </dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.14.0</version>
-</dependency>
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.16.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+     <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 <dependency>
     <groupId>commons-codec</groupId>
     <artifactId>commons-codec</artifactId>
-    <version>1.17.0</version>
+    <version>${commons-codec.version}</version>
 </dependency>  
-<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.23.1</version>
-</dependency>
 <dependency>
     <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-slf4j2-impl</artifactId>
-    <version>2.20.0</version>
+    <version>${log4j-slf4j2-impl.version}</version>
 </dependency>
+</dependencies>
 
+<build>
+        <finalName>Appium-package</finalName> <!--This is the name given for jar files after packaging-->
+        <plugins>
+            <!-- To compile the source code using specific java version. also to force IDE to change the settings -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
+            <!-- To run the tests using specific parameters, change thread count, testng report output directory etc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+                <configuration>
+                 <!--   mvn clean test -Dbrowser=chrome -Dselenium.grid.enabled=true
+                    <systemPropertyVariables>
+                        <browser>chrome</browser>
+                        <selenium.grid.enabled>false</selenium.grid.enabled> we have done this so that we can run our test locally or 
+                    </systemPropertyVariables>-->
+                    <suiteXmlFiles>
+                        <file>src/test/resources/test-suites/testng.xml</file>
+                    </suiteXmlFiles>
+                    <threadCount>2</threadCount>
+                    <!--Reports will be generated in below path -->
+                    <reportsDirectory>target/extent-test-output</reportsDirectory>
+                </configuration>
+            </plugin>
+            <!-- To copy all the dependencies to run our tests as part of "mvn package" -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven.dependency.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <!--package directory is mentioned above, in that package directory libs
+                            folder it will create and package all dependencied from src folder and put it here-->
+                            <outputDirectory>
+                                ${package.directory}/libs
+                            </outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- To package our page objects, test classes into jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven.jar.version}</version>
+                <configuration>
+                    <!--here in libs folder maven will package src main and src test files,by default maven
+                      only packages src main so below we have mentioned the goal for src test folder also-->
+                    <outputDirectory>${package.directory}/libs</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal><!--We are using this since maven mainly focuses on packaging of src/main/java but not src/test-->
+                        </goals>
+                        <configuration>
+                            <!--here we are only packagig those files which have .class filetype other than this it will not
+                            include in packaging-->
+                            <includes>**/*.class</includes>  <!--This means **-package *-classname-->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- To copy resources into the output directory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.plugin}</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <!--here we are copying all resources which do not have .class filetype-->
+                            <outputDirectory>${package.directory}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/test/resources</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+       <!--      To copy a specific folder from the project root directory to the package directory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>${maven.antrun.plugin}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                           <target>
+							 <copy  todir="${package.directory}/Logs">
+                                     <fileset dir="Logs"/>
+							 </copy>      
+                             <copy  todir="${package.directory}/Screenshots">
+                                      <fileset dir="Screenshots"/>
+                             </copy>       
+                             <copy  todir="${package.directory}/ServerLogs">        
+                                      <fileset dir="ServerLogs"/>
+                             </copy>
+                             <copy  todir="${package.directory}/Videos">         
+                                      <fileset dir="Videos"/>
+                             </copy>
+                             <delete dir="${project.build.directory}/ant-run"/>
+						   </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!-- Maven Clean Plugin to delete ant-run directory -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-clean-plugin</artifactId>
+      <version>3.1.0</version>
+      <executions>
+        <execution>
+          <id>clean-ant-run</id>
+          <phase>post-clean</phase>
+          <goals>
+            <goal>clean</goal>
+          </goals>
+          <configuration>
+            <filesets>
+              <fileset>
+                <directory>${project.build.directory}/ant-run</directory>
+                <includes>
+                  <include>**/*</include>
+                </includes>
+              </fileset>
+            </filesets>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
 
-</dependencies> 
+        </plugins>
+    </build>
+ 
 
 </project>

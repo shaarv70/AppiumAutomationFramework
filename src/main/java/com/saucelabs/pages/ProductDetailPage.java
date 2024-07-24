@@ -2,9 +2,11 @@ package com.saucelabs.pages;
 
 import org.openqa.selenium.WebElement;
 
+import com.saucelabs.enums.WaitStrategy;
+
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class ProductDetailPage extends MenuBar {
+public final class ProductDetailPage extends MenuBar {
 	
 	
 	@AndroidFindBy(xpath="//*[@text=\"Sauce Labs Backpack\"]")
@@ -22,13 +24,13 @@ public class ProductDetailPage extends MenuBar {
 	
 	public ProductDetailPage assertProductNameonDetailsPage(String name)
 	{
-		assertFunction(productName.getText(), name);
+		assertFunction(getText(WaitStrategy.VISIBILITY,productName), name);
 		return this;
 	}
 	
 	public ProductDetailPage assertProductDescription(String desc)
 	{
-		assertFunction(productDesc.getText(),desc);
+		assertFunction(getText(WaitStrategy.VISIBILITY,productDesc),desc);
 		return this;
 		
 	}
@@ -36,7 +38,7 @@ public class ProductDetailPage extends MenuBar {
 	public ProductDetailPage assertProductPrice(String price)
 	{
 		scroll("ADD TO CART","Product Price");
-		assertFunction(productPrice.getText(),price);
+		assertFunction(getText(WaitStrategy.VISIBILITY,productPrice),price);
 		return this;
 		
 	}

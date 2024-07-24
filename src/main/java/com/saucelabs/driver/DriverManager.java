@@ -5,25 +5,26 @@ import java.util.Objects;
 import io.appium.java_client.AppiumDriver;
 
 public class DriverManager {
-	
-	
 
 
-	private static ThreadLocal<AppiumDriver> dr= new ThreadLocal<>();
+     private DriverManager() {}
+
+	static ThreadLocal<AppiumDriver> dr= new ThreadLocal<>();
 
 	public static AppiumDriver getDriver()
 	{
 		if(Objects.nonNull(dr))
-		{return dr.get();
+		{
+			return dr.get();
 		}
-	  return null;	
+		return null;	
 	}
 
 	static void setDriver(AppiumDriver ref ) {
 		if(Objects.nonNull(ref)) {
 			dr.set(ref);
 		}
-		}
+	}
 
 	static void unload()
 	{

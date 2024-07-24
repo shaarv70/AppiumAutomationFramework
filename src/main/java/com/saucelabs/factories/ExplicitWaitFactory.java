@@ -19,26 +19,26 @@ public final class ExplicitWaitFactory {
 	
 	
 	public static WebElement explicitWait(WaitStrategy wait,WebElement ele)
-	{   WebElement ele1=null;
+	{   WebElement element=null;
 		
 		if(wait==WaitStrategy.CLICKABLE)
 		{
-		  ele1= new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(FrameworkConstants.getExplicitwait())).
+			element= new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(FrameworkConstants.getExplicitwait())).
 			until(ExpectedConditions.elementToBeClickable(ele));
 		}
 	
 		else if(wait==WaitStrategy.VISIBILITY)
 		{
-		  ele1= new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(FrameworkConstants.getExplicitwait())).
+			element= new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(FrameworkConstants.getExplicitwait())).
 			until(ExpectedConditions.visibilityOf(ele));
 		}
-	
+		
 		else if(wait==WaitStrategy.NONE)
 		{
-			ele1= ele; 
+			element= ele; 
 		}
 		
-		return ele1;
+		return element;
 		
 	}
 	

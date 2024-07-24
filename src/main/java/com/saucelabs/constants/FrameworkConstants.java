@@ -19,10 +19,15 @@ public final class FrameworkConstants {
 	private static final String STATICTEXT=RESOURCES+File.separator+"staticData"+File.separator+"strings.xml";
 	private static final String SCREENSHOTS= System.getProperty("user.dir")+File.separator+"Screenshots";
 	private static final String VIDEOS= System.getProperty("user.dir")+File.separator+"Videos";
+	private static final String EXTENTREPORTFOLDERPATH=System.getProperty("user.dir")+File.separator+"target"+File.separator+"extent-test-output"+File.separator;
+	private static String EXTENTREPORTFILEPATH="";
+	private static String LOGFILEPATH="";
+	private static final String LOGFOLDERPATH=System.getProperty("user.dir")+File.separator+"Logs"+File.separator;
     private static final String DRIVEREXECUTABLE="C:"+File.separator+"Program Files"+File.separator+"nodejs"+File.separator+"node.exe";
     private static final String APPIUMJS= "C:"+File.separator+"Users"+File.separator+"arvin"+File.separator+"AppData"+
     										File.separator+"Roaming"+File.separator+"npm"+File.separator+"node_modules"+
     										File.separator+"appium"+File.separator+"build"+File.separator+"lib"+File.separator+"main.js";
+    
 	
     
     public static String getDriverexecutable() {
@@ -36,10 +41,7 @@ public final class FrameworkConstants {
 	}
 
 
-	private static final String EXTENTREPORTFOLDERPATH=System.getProperty("user.dir")+File.separator+"extent-test-output"+File.separator;
-	private static String EXTENTREPORTFILEPATH="";
-	private static String LOGFILEPATH="";
-	private static final String LOGFOLDERPATH=System.getProperty("user.dir")+File.separator+"Logs"+File.separator;
+	
 	
 
 	public static String getVideos() {
@@ -91,18 +93,18 @@ public final class FrameworkConstants {
 	public static String createFilepath() {
 		if(PropertyUtils.getProperty(Config.OVERRIDEREPORTS).equalsIgnoreCase("yes"))
 		{
-			return EXTENTREPORTFOLDERPATH+"index.html";
+			return EXTENTREPORTFOLDERPATH+"report.html";
 		}
 		else
 		{
-			return   EXTENTREPORTFOLDERPATH+MediaLocationUtils.timeStamp+File.separator+"report.html";
+			return   EXTENTREPORTFOLDERPATH+MediaLocationUtils.TIMESTAMP+File.separator+"report.html";
 		}
 
 	}
 	
 	
 	
-	public static String getNEWLogFILEPATH(String dname, String ud) 
+	public static String getNewLogFilePath(String dname, String ud) 
 	{          
 		
 		if(!createLogsFilePath(dname,ud).exists())

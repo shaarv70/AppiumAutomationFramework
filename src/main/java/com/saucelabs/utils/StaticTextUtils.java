@@ -14,6 +14,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.saucelabs.constants.FrameworkConstants;
+import com.saucelabs.exceptions.KeyNotFoundException;
+import com.saucelabs.exceptions.XMLParsingFailedException;
 
 public class StaticTextUtils {
 	
@@ -56,17 +58,17 @@ public class StaticTextUtils {
 	}
 		catch(Exception e)
 		{
-			throw new RuntimeException("Xml not parsed");
+			throw new XMLParsingFailedException("Failed to parse XML");
 		}
 		
 		}
 		
 
-      public synchronized static String getStaticText(String key)
+      public static synchronized  String getStaticText(String key)
       {
     	  if(Objects.isNull(key))
     	  {
-    		  throw new RuntimeException("key not found");
+    		  throw new KeyNotFoundException("key not found : "+key);
     	  }
      
          return MYMAP.get(key);

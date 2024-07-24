@@ -10,9 +10,9 @@ import java.util.Date;
 import org.apache.commons.codec.binary.Base64;
 import org.testng.ITestResult;
 
-import com.saucelabs.listeners.Listeners;
+import com.saucelabs.exceptions.FileNotPresentException;
 
-public class MediaLocationUtils {
+public final class MediaLocationUtils {
 	
 	   
 	private MediaLocationUtils() {}
@@ -22,15 +22,15 @@ public class MediaLocationUtils {
 	static FileOutputStream stream=null;
 	
 
-	public static String timeStamp = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss").format(new Date());
+	public static final String TIMESTAMP = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss").format(new Date());
 	
 	
-	public static void directoryUtils(ITestResult result,String directory,String file,String type) throws IOException
+	public static void directoryUtils(ITestResult result,String directory,String file,String type) 
 	{
 		
 		
 		String path= directory+File.separator+TestPropertiesUtils.getCONFIGMAP().get("platformName")+"_"+
-				TestPropertiesUtils.getCONFIGMAP().get("deviceName")+File.separator+result.getTestClass().getRealClass().getSimpleName()+File.separator+timeStamp;
+				TestPropertiesUtils.getCONFIGMAP().get("deviceName")+File.separator+result.getTestClass().getRealClass().getSimpleName()+File.separator+TIMESTAMP;
 
 		File dir= new File(path);
 		synchronized (dir) {
@@ -40,16 +40,26 @@ public class MediaLocationUtils {
 			}
 		}
 		
+		String location=dir+File.separator+result.getName()+type;
 
-		try{
-			stream= new FileOutputStream(dir+File.separator+result.getName()+type);
-			stream.write(Base64.decodeBase64(file));
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		}
-		finally {
-			stream.close();
+		
+			try {
+				stream= new FileOutputStream(location);
+				stream.write(Base64.decodeBase64(file));
+			} catch (FileNotFoundException e) {
+				
+				 throw new FileNotPresentException("File not found at the present location : "+location, e);  
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		  finally {
+			try {
+				stream.close();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
 		}
 
 }}

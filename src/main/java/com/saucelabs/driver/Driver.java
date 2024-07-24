@@ -11,14 +11,10 @@ public final class Driver {
 	private Driver(){}
 	
 	
-	
-	
-	
 	public static void initializeDriver(String emul,String pname, String dname, String ud) 
 	{
 		if(Objects.isNull(DriverManager.getDriver())) {
 
-		
 		DriverManager.setDriver(DriverFactory.initialize(emul,pname, dname, ud));
 		    
 		}
@@ -32,9 +28,6 @@ public final class Driver {
 		 if(Objects.nonNull(DriverManager.getDriver())) {
 				DriverManager.getDriver().quit();
 				DriverManager.unload();
-			   
-
-
 			}
 	 }
      

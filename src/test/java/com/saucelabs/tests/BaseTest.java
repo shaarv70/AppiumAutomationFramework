@@ -16,6 +16,8 @@ import com.saucelabs.constants.FrameworkConstants;
 import com.saucelabs.driver.Driver;
 import com.saucelabs.driver.DriverManager;
 import com.saucelabs.enums.Config;
+import com.saucelabs.exceptions.DriverInvocationFailedException;
+import com.saucelabs.factories.DriverFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.appmanagement.AndroidTerminateApplicationOptions;
@@ -24,28 +26,43 @@ import io.appium.java_client.android.appmanagement.AndroidTerminateApplicationOp
 
 public class BaseTest {
 
-	
 
-	
-	
+
+
 	@BeforeTest
 	@Parameters({"emulator","platformName","deviceName","udid"})
 	protected  void setup(String eml,String pname, String dname, String ud) 
 	{
-		Driver.initializeDriver(eml,pname,dname, ud);
-		
-		MDC.put("ROUTINGKEY", FrameworkConstants.getNEWLogFILEPATH(dname,ud));
+		try {
+			Driver.initializeDriver(eml,pname,dname, ud);
+		}
+
+		catch(Exception e)
+		{
+			throw new DriverInvocationFailedException("Failed to invoke driver",e);
+		}
+
+		MDC.put("ROUTINGKEY", FrameworkConstants.getNewLogFilePath(dname,ud));
 	}
 
 
-	  @BeforeMethod 
-	  protected void launchApp() {
-	  
-	  
-	  ((AndroidDriver)(DriverManager.getDriver())).activateApp(getProperty(Config.APPPACKAGE));
-		
-	  }
-	 
+	@BeforeMethod(onlyForGroups = {"WithoutDeepLinks"})
+	protected void launchApp() {
+
+		((AndroidDriver)(DriverManager.getDriver())).activateApp(getProperty(Config.APPPACKAGE));
+
+	}
+
+
+
+	@BeforeMethod(onlyForGroups = {"DeepLinks"}) 
+	protected void launchAppWithDeepLink() {
+
+		DriverFactory.initialize("swaglabs://swag-overview/0,1");
+
+	}
+
+
 
 	@AfterMethod
 	protected  void closeApp()
@@ -65,5 +82,5 @@ public class BaseTest {
 	}
 
 
-	
+
 }

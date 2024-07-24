@@ -10,13 +10,15 @@ import java.util.Objects;
 import java.util.Properties;
 
 import com.saucelabs.enums.Config;
+import com.saucelabs.exceptions.DataLoadingFailedException;
+import com.saucelabs.exceptions.KeyNotFoundException;
 
-public class PropertyUtils {
+public final class PropertyUtils {
 	
+	    private PropertyUtils() {}
 	
-	
-	    protected static ThreadLocal<Properties> props= new ThreadLocal<Properties>()  ;
-	    private static final Map<String,String> CONFIGMAP= new HashMap<String, String>();
+	    protected static ThreadLocal<Properties> props= new ThreadLocal<>()  ;
+	    private static final Map<String,String> CONFIGMAP= new HashMap<>();
 	    public static FileInputStream file;
 	 
 	  
@@ -45,7 +47,8 @@ public class PropertyUtils {
 	        } catch (IOException e) {
 	            // Log the exception and throw a runtime exception to handle it properly
 	            e.printStackTrace();
-	            throw new RuntimeException("Failed to load properties: " + e.getMessage());
+	            
+	            throw new DataLoadingFailedException("Failed to load properties " + e);
 	        }
 	           
 	        finally {
@@ -62,7 +65,8 @@ public class PropertyUtils {
 	    	
 	    	
 	        if (Objects.isNull(config) || Objects.isNull(CONFIGMAP.get(config.name().toLowerCase()))) {
-	            throw new RuntimeException("Key not found");
+	        	
+	            throw new KeyNotFoundException("Property key not found :"+config);
 	        }
 	        return CONFIGMAP.get(config.name().toLowerCase());
 	    }
