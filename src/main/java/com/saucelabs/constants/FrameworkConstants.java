@@ -19,7 +19,7 @@ public final class FrameworkConstants {
 	private static final String STATICTEXT="staticData"+File.separator+"strings.xml";
 	private static final String SCREENSHOTS="Screenshots";
 	private static final String VIDEOS= "Videos";
-	private static final String EXTENTREPORTFOLDERPATH="target"+File.separator+"extent-test-output"+File.separator;
+	private static final String EXTENTREPORTFOLDERPATH="extent-test-output"+File.separator;
 	private static String EXTENTREPORTFILEPATH="";
 	private static String LOGFILEPATH="";
 	private static final String LOGFOLDERPATH="Logs"+File.separator;

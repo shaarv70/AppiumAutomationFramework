@@ -1,0 +1,96 @@
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:45.170 LoginTests:44 - *****************Starting invalidPassword test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:45.567 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:47.328 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:47.995 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:50.362 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:52.554 LoginTests:26 - *****************Starting invalidUsername test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:52.559 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:53.971 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:54.676 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:56.388 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:58.423 LoginTests:63 - *****************Starting validCredentials test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:58.427 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:01:59.936 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:01.089 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:03.238 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:03.240 BasePage:38 - Clicking on Hamburger
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:03.437 BasePage:38 - Clicking on Logout Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:08.248 ProductTests:44 - *****************Starting validateProductonProductDetailsPage test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:08.250 BasePage:38 - Clicking on Product
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:10.246 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:10.465 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:10.466 BasePage:53 - Doing Scrolling for Product Price
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:13.678 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:13.678 BasePage:38 - Clicking on Hamburger
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:13.851 BasePage:38 - Clicking on Logout Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:18.660 ProductTests:24 - *****************Starting validateProductonProductsPage test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:19.429 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:19.963 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:19.963 BasePage:38 - Clicking on Hamburger
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:02:20.224 BasePage:38 - Clicking on Logout Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:06.413 LoginTests:44 - *****************Starting invalidPassword test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:07.270 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:11.093 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:12.270 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:15.819 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:20.893 LoginTests:26 - *****************Starting invalidUsername test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:20.897 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:23.812 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:25.048 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:27.866 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:32.114 LoginTests:63 - *****************Starting validCredentials test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:32.117 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:34.825 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:35.928 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:38.356 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:45.821 ProductTests:44 - *****************Starting validateProductonProductDetailsPage test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:45.824 BasePage:38 - Clicking on Product
+[Logsemulator-5554_pixel_8 ERROR] 2024-07-27 13:36:47.130 ProductTests:53 - Test validateProductonProductDetailsPage failed
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:47.131 ProductTests:54 - [Ljava.lang.StackTraceElement;@4a1322f0
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:51.877 ProductTests:24 - *****************Starting validateProductonProductsPage test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:54.700 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:55.151 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:55.153 BasePage:38 - Clicking on Hamburger
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:36:55.441 BasePage:38 - Clicking on Logout Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:20.893 LoginTests:44 - *****************Starting invalidPassword test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:21.764 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:24.716 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:25.792 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:28.816 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:32.242 LoginTests:26 - *****************Starting invalidUsername test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:32.247 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:34.670 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:35.746 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:37.841 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:40.948 LoginTests:63 - *****************Starting validCredentials test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:40.950 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:42.840 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:43.532 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:46.107 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:52.200 ProductTests:44 - *****************Starting validateProductonProductDetailsPage test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:52.202 BasePage:38 - Clicking on Product
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:57.317 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:57.707 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:39:57.708 BasePage:53 - Doing Scrolling for Product Price
+[Logsemulator-5554_pixel_8 ERROR] 2024-07-27 13:40:02.084 ProductTests:53 - Test validateProductonProductDetailsPage failed
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:40:02.085 ProductTests:54 - [Ljava.lang.StackTraceElement;@30b2799e
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:40:06.771 ProductTests:24 - *****************Starting validateProductonProductsPage test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:40:08.406 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:40:08.970 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:40:08.970 BasePage:38 - Clicking on Hamburger
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 13:40:09.287 BasePage:38 - Clicking on Logout Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:06.611 LoginTests:44 - *****************Starting invalidPassword test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:07.269 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:08.044 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:09.099 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:12.239 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:15.821 LoginTests:26 - *****************Starting invalidUsername test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:15.823 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:18.394 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:19.022 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:21.178 BasePage:67 - Performing Assertion
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:24.834 LoginTests:63 - *****************Starting validCredentials test**********************
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:24.838 BasePage:45 - Entering the username
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:27.869 BasePage:45 - Entering the pasword
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:28.959 BasePage:38 - Clicking on Login Button
+[Logsemulator-5554_pixel_8 INFO ] 2024-07-27 14:59:31.516 BasePage:67 - Performing Assertion

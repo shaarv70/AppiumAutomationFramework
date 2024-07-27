@@ -117,7 +117,7 @@
 					</suiteXmlFiles>
 					<threadCount>2</threadCount>
 					<!--Reports will be generated in below path -->
-					<reportsDirectory>extent-test-output</reportsDirectory>
+					<reportsDirectory>${project.build.directory}/extent-test-output</reportsDirectory>
 				</configuration>
 			</plugin>
 			<!-- To copy all the dependencies to run our tests as part of "mvn
@@ -221,15 +221,15 @@
 					</execution>
 					<execution>
 						<id>delete-directory</id>
-						 <phase>post-clean</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
+						 <phase>package</phase>
 						<configuration>
 							<target>
 								<delete dir="${project.build.directory}/antrun"/>
 							</target>
 						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>

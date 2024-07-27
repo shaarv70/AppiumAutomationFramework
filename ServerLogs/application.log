@@ -1,0 +1,58 @@
+[ServerLogs INFO ] 2024-07-27 13:01:39.127 Listeners:46 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-07-27 13:01:39.153 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-07-27 13:01:39.153 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-07-27 13:01:39.160 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-07-27 13:01:39.162 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
+[ServerLogs INFO ] 2024-07-27 13:01:39.162 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 13:01:39.162 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-07-27 13:01:39.166 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-07-27 13:01:39.166 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-07-27 13:01:39.166 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-07-27 13:01:39.167 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-07-27 13:01:39.167 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-07-27 13:01:39.167 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 13:02:23.006 Listeners:67 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-07-27 13:02:23.007 Listeners:69 - Report Sent
+[ServerLogs INFO ] 2024-07-27 13:35:58.739 Listeners:46 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-07-27 13:35:58.782 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-07-27 13:35:58.783 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-07-27 13:35:58.789 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-07-27 13:35:58.790 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
+[ServerLogs INFO ] 2024-07-27 13:35:58.790 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 13:35:58.790 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-07-27 13:35:58.791 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-07-27 13:35:58.791 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-07-27 13:35:58.792 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-07-27 13:35:58.792 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-07-27 13:35:58.793 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-07-27 13:35:58.793 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 13:36:59.520 Listeners:67 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-07-27 13:36:59.520 Listeners:69 - Report Sent
+[ServerLogs INFO ] 2024-07-27 13:39:13.154 Listeners:46 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-07-27 13:39:13.181 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-07-27 13:39:13.182 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-07-27 13:39:13.192 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-07-27 13:39:13.192 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
+[ServerLogs INFO ] 2024-07-27 13:39:13.193 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 13:39:13.193 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-07-27 13:39:13.194 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-07-27 13:39:13.194 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-07-27 13:39:13.195 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-07-27 13:39:13.195 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-07-27 13:39:13.196 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-07-27 13:39:13.196 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 13:40:13.402 Listeners:67 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-07-27 13:40:13.402 Listeners:69 - Report Sent
+[ServerLogs INFO ] 2024-07-27 14:58:58.404 Listeners:46 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-07-27 14:58:58.443 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-07-27 14:58:58.444 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-07-27 14:58:58.456 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-07-27 14:58:58.457 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
+[ServerLogs INFO ] 2024-07-27 14:58:58.457 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-07-27 14:58:58.458 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-07-27 14:58:58.458 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-07-27 14:58:58.460 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-07-27 14:58:58.461 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-07-27 14:58:58.462 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-07-27 14:58:58.462 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-07-27 14:58:58.462 PropertyUtils:56 - skippedstepsscreenshot=yes
