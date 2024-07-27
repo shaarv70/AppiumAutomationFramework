@@ -85,7 +85,7 @@ public class Listeners implements ITestListener, ISuiteListener{
 		{
 			throw new ExtentReportInvocationFailedException("Failed to invoke Extent Report",e);
 		}
-		((CanRecordScreen)DriverManager.getDriver()).startRecordingScreen();
+		((CanRecordScreen) Objects.requireNonNull(DriverManager.getDriver())).startRecordingScreen();
 
 	}
 

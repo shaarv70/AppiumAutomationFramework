@@ -5,6 +5,7 @@ import org.testng.ITestResult;
 import com.saucelabs.constants.FrameworkConstants;
 import com.saucelabs.driver.DriverManager;
 
+import java.util.Objects;
 
 
 public final class ScreenshotUtils {
@@ -13,13 +14,13 @@ public final class ScreenshotUtils {
 	
 	public static void getScreenshot(ITestResult result ) 
 	{
-		String ss =DriverManager.getDriver().getScreenshotAs(OutputType.BASE64);
+		String ss = Objects.requireNonNull(DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
         MediaLocationUtils.directoryUtils(result,FrameworkConstants.getScreenshots(),ss,".png");
 	}
 	
 	public static String getScreenshot()
 	{
-		return DriverManager.getDriver().getScreenshotAs(OutputType.BASE64);
+		return Objects.requireNonNull(DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 	}
 	
 

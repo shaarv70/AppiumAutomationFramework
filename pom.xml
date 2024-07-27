@@ -221,13 +221,13 @@
 					</execution>
 					<execution>
 						<id>delete-directory</id>
-						 <phase>post-package</phase>
+						 <phase>post-clean</phase>
 						<goals>
 							<goal>run</goal>
 						</goals>
 						<configuration>
 							<target>
-								<delete dir="${project.build.directory}/antrun/build-main.xml"/>
+								<delete dir="${project.build.directory}/antrun"/>
 							</target>
 						</configuration>
 					</execution>
