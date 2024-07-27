@@ -27,6 +27,9 @@ public final class ExtentReport {
 				extent = new ExtentReports();
 				ExtentSparkReporter spark= new ExtentSparkReporter(FrameworkConstants.getNEWFILEPATH());
 				extent.attachReporter(spark);
+				extent.setSystemInfo("Application", "SauceLabs");
+				extent.setSystemInfo("Operating System", System.getProperty("os.name"));
+				extent.setSystemInfo("Environemnt", "QA-UAT");
 				spark.config().setTheme(Theme.STANDARD);
 				spark.config().setDocumentTitle("APPIUM Report");
 				spark.config().setReportName("Automation Report");

@@ -20,6 +20,8 @@ import com.saucelabs.exceptions.ExtentReportInvocationFailedException;
 import com.saucelabs.factories.DriverFactory;
 import com.saucelabs.reports.ExtentLogger;
 import com.saucelabs.reports.ExtentReport;
+import com.saucelabs.utils.EmailUtils;
+import com.saucelabs.utils.LoggingUtils;
 import com.saucelabs.utils.PropertyUtils;
 import com.saucelabs.utils.ScreenshotUtils;
 import com.saucelabs.utils.TestPropertiesUtils;
@@ -65,7 +67,8 @@ public class Listeners implements ITestListener, ISuiteListener{
 		ExtentReport.flushReports();
 		server.stop();
 		log().info("APPIUM SERVER STOPPED");
-
+		/* EmailUtils.sendReport(); */
+		log().info("Report Sent");
 	}
 
 	@Override

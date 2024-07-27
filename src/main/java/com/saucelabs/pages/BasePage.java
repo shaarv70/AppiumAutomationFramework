@@ -6,6 +6,7 @@ import static com.saucelabs.utils.LoggingUtils.log;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.saucelabs.driver.DriverManager;
@@ -65,9 +66,7 @@ public class BasePage {
 	{
 		log().info("Performing Assertion");  
 		ExtentLogger.pass("Performing Assertion",true );
-		SoftAssert s= new SoftAssert();
-		s. assertEquals(actual,expected);
-		s.assertAll();
+		Assert.assertEquals(actual,expected);
 
 	}
 	

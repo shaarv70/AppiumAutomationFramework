@@ -12,17 +12,17 @@ public final class FrameworkConstants {
 	private FrameworkConstants() {}
 
 
-	private static final String RESOURCES=System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources";	
-	private static final String APPPATH= RESOURCES+File.separator+"app"+File.separator+"Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
-	private static final String CONFIGFILEPATH=RESOURCES+File.separator+"config.properties";
-	private static final String TESTDATA=RESOURCES+File.separator+"testData"+File.separator+"loginUsers.json";
-	private static final String STATICTEXT=RESOURCES+File.separator+"staticData"+File.separator+"strings.xml";
-	private static final String SCREENSHOTS= System.getProperty("user.dir")+File.separator+"Screenshots";
-	private static final String VIDEOS= System.getProperty("user.dir")+File.separator+"Videos";
-	private static final String EXTENTREPORTFOLDERPATH=System.getProperty("user.dir")+File.separator+"target"+File.separator+"extent-test-output"+File.separator;
+//	private static final String RESOURCES=System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources";	
+	private static final String APPPATH= "app"+File.separator+"Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
+	private static final String CONFIGFILEPATH="config"+File.separator+"config.properties";
+	private static final String TESTDATA="testData"+File.separator+"loginUsers.json";
+	private static final String STATICTEXT="staticData"+File.separator+"strings.xml";
+	private static final String SCREENSHOTS="Screenshots";
+	private static final String VIDEOS= "Videos";
+	private static final String EXTENTREPORTFOLDERPATH="target"+File.separator+"extent-test-output"+File.separator;
 	private static String EXTENTREPORTFILEPATH="";
 	private static String LOGFILEPATH="";
-	private static final String LOGFOLDERPATH=System.getProperty("user.dir")+File.separator+"Logs"+File.separator;
+	private static final String LOGFOLDERPATH="Logs"+File.separator;
     private static final String DRIVEREXECUTABLE="C:"+File.separator+"Program Files"+File.separator+"nodejs"+File.separator+"node.exe";
     private static final String APPIUMJS= "C:"+File.separator+"Users"+File.separator+"arvin"+File.separator+"AppData"+
     										File.separator+"Roaming"+File.separator+"npm"+File.separator+"node_modules"+

@@ -14,7 +14,7 @@
       <class name="com.saucelabs.tests.ProductTests"/>
     </classes>
   </test>
-  <test  name="Pixel_8_copy">
+  <!--<test  name="Pixel_8_copy">
 	  <parameter name="emulator" value="true"/>
 	  <parameter name="platformName" value="Android"/>
 	  <parameter name="deviceName" value="pixel_8"/>
@@ -23,6 +23,6 @@
 	  <class name="com.saucelabs.tests.LoginTests"/>
       <class name="com.saucelabs.tests.ProductTests"/>
     </classes>
-  </test>
+  </test>-->
   </suite> 
 
