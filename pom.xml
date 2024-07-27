@@ -207,7 +207,7 @@
           <configuration>
             <filesets>
               <fileset>
-                <directory>${project.build.directory}/ant-run</directory>
+                <directory>${project.build.directory}/antrun</directory>
                 <includes>
                   <include>**/*</include>
                 </includes>
@@ -217,9 +217,6 @@
         </execution>
       </executions>
     </plugin>
-
         </plugins>
     </build>
- 
-
 </project>

@@ -23,3 +23,28 @@
 [C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 00:39:59.810 BasePage:66 - Performing Assertion
 [C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 00:39:59.812 BasePage:37 - Clicking on Hamburger
 [C:Usersarvineclipse-workspaceApppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 00:40:00.311 BasePage:37 - Clicking on Logout Button
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:18.253 LoginTests:40 - *****************Starting invalidPassword test**********************
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:18.264 BasePage:44 - Entering the username
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:33.172 BasePage:44 - Entering the pasword
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:34.343 BasePage:37 - Clicking on Login Button
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:41.374 BasePage:66 - Performing Assertion
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:47.360 LoginTests:24 - *****************Starting invalidUsername test**********************
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:47.363 BasePage:44 - Entering the username
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:50.196 BasePage:44 - Entering the pasword
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:50.892 BasePage:37 - Clicking on Login Button
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:53.588 BasePage:66 - Performing Assertion
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:57.055 LoginTests:58 - *****************Starting validCredentials test**********************
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:37:57.057 BasePage:44 - Entering the username
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:00.187 BasePage:44 - Entering the pasword
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:01.434 BasePage:37 - Clicking on Login Button
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:04.937 BasePage:66 - Performing Assertion
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:04.938 BasePage:37 - Clicking on Hamburger
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:05.423 BasePage:37 - Clicking on Logout Button
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:14.117 ProductTests:43 - *****************Starting validateProductonProductDetailsPage test**********************
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:15.886 BasePage:66 - Performing Assertion
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 ERROR] 2024-07-24 21:38:38.633 ProductTests:51 - Test validateProductonProductDetailsPage failed
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:45.045 ProductTests:24 - *****************Starting validateProductonProductsPage test**********************
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:48.182 BasePage:66 - Performing Assertion
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:49.057 BasePage:66 - Performing Assertion
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:49.057 BasePage:37 - Clicking on Hamburger
+[C:UsersarvinIdeaProjectsAppiumAutomationFrameworkLogsemulator-5556_pixel_8 INFO ] 2024-07-24 21:38:49.536 BasePage:37 - Clicking on Logout Button
