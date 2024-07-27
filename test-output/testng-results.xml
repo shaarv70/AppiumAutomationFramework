@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="14" passed="10" failed="0" skipped="0">
+<testng-results ignored="2" total="7" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-23T23:27:32 IST" name="Suite" finished-at="2024-07-23T23:29:01 IST" duration-ms="88208">
+  <suite started-at="2024-07-26T23:39:33 IST" name="Suite" finished-at="2024-07-26T23:40:32 IST" duration-ms="59402">
     <groups>
       <group name="WithoutDeepLinks">
-        <method signature="LoginTests.invalidPassword(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" name="invalidPassword" class="com.saucelabs.tests.LoginTests"/>
-        <method signature="LoginTests.invalidUsername(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" name="invalidUsername" class="com.saucelabs.tests.LoginTests"/>
-        <method signature="LoginTests.validCredentials(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" name="validCredentials" class="com.saucelabs.tests.LoginTests"/>
-        <method signature="LoginTests.invalidPassword(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" name="invalidPassword" class="com.saucelabs.tests.LoginTests"/>
-        <method signature="LoginTests.invalidUsername(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" name="invalidUsername" class="com.saucelabs.tests.LoginTests"/>
-        <method signature="LoginTests.validCredentials(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" name="validCredentials" class="com.saucelabs.tests.LoginTests"/>
+        <method signature="LoginTests.invalidPassword(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" name="invalidPassword" class="com.saucelabs.tests.LoginTests"/>
+        <method signature="LoginTests.invalidUsername(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" name="invalidUsername" class="com.saucelabs.tests.LoginTests"/>
+        <method signature="LoginTests.validCredentials(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" name="validCredentials" class="com.saucelabs.tests.LoginTests"/>
       </group> <!-- WithoutDeepLinks -->
       <group name="DeepLinks">
-        <method signature="ProductTests.validateProductonProductDetailsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" name="validateProductonProductDetailsPage" class="com.saucelabs.tests.ProductTests"/>
-        <method signature="ProductTests.validateProductonProductsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" name="validateProductonProductsPage" class="com.saucelabs.tests.ProductTests"/>
-        <method signature="ProductTests.validateProductonProductDetailsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" name="validateProductonProductDetailsPage" class="com.saucelabs.tests.ProductTests"/>
-        <method signature="ProductTests.validateProductonProductsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" name="validateProductonProductsPage" class="com.saucelabs.tests.ProductTests"/>
+        <method signature="ProductTests.validateProductonProductDetailsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" name="validateProductonProductDetailsPage" class="com.saucelabs.tests.ProductTests"/>
+        <method signature="ProductTests.validateProductonProductsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" name="validateProductonProductsPage" class="com.saucelabs.tests.ProductTests"/>
       </group> <!-- DeepLinks -->
     </groups>
-    <test started-at="2024-07-23T23:27:32 IST" name="Pixel_8_copy" finished-at="2024-07-23T23:29:00 IST" duration-ms="87898">
+    <test started-at="2024-07-26T23:39:33 IST" name="Pixel_8" finished-at="2024-07-26T23:40:32 IST" duration-ms="59402">
       <class name="com.saucelabs.tests.ProductTests">
-        <test-method is-config="true" signature="launchAppWithDeepLink()[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" started-at="2024-07-23T23:28:16 IST" name="launchAppWithDeepLink" finished-at="2024-07-23T23:28:19 IST" duration-ms="2787" status="PASS">
+        <test-method is-config="true" signature="launchAppWithDeepLink()[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" started-at="2024-07-26T23:40:09 IST" name="launchAppWithDeepLink" finished-at="2024-07-26T23:40:11 IST" duration-ms="1979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchAppWithDeepLink -->
-        <test-method signature="validateProductonProductDetailsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" started-at="2024-07-23T23:28:19 IST" name="validateProductonProductDetailsPage" finished-at="2024-07-23T23:28:47 IST" duration-ms="27941" status="PASS">
+        <test-method signature="validateProductonProductDetailsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" started-at="2024-07-26T23:40:11 IST" name="validateProductonProductDetailsPage" finished-at="2024-07-26T23:40:21 IST" duration-ms="10635" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,15 +31,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductonProductDetailsPage -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" started-at="2024-07-23T23:28:47 IST" name="closeApp" finished-at="2024-07-23T23:28:47 IST" duration-ms="790" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" started-at="2024-07-26T23:40:21 IST" name="closeApp" finished-at="2024-07-26T23:40:22 IST" duration-ms="659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="launchAppWithDeepLink()[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" started-at="2024-07-23T23:28:47 IST" name="launchAppWithDeepLink" finished-at="2024-07-23T23:28:51 IST" duration-ms="3469" status="PASS">
+        <test-method is-config="true" signature="launchAppWithDeepLink()[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" started-at="2024-07-26T23:40:22 IST" name="launchAppWithDeepLink" finished-at="2024-07-26T23:40:24 IST" duration-ms="1876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchAppWithDeepLink -->
-        <test-method signature="validateProductonProductsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" started-at="2024-07-23T23:28:51 IST" name="validateProductonProductsPage" finished-at="2024-07-23T23:28:59 IST" duration-ms="7880" status="PASS">
+        <test-method signature="validateProductonProductsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" started-at="2024-07-26T23:40:24 IST" name="validateProductonProductsPage" finished-at="2024-07-26T23:40:31 IST" duration-ms="7183" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,144 +50,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductonProductsPage -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.ProductTests@4d154ccd]" started-at="2024-07-23T23:28:59 IST" name="closeApp" finished-at="2024-07-23T23:29:00 IST" duration-ms="997" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.ProductTests@61001b64]" started-at="2024-07-26T23:40:31 IST" name="closeApp" finished-at="2024-07-26T23:40:32 IST" duration-ms="525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- com.saucelabs.tests.ProductTests -->
       <class name="com.saucelabs.tests.LoginTests">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:27:32 IST" name="setup" finished-at="2024-07-23T23:27:38 IST" duration-ms="5150" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[pixel_8]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[emulator-5556]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:27:38 IST" name="launchApp" finished-at="2024-07-23T23:27:38 IST" duration-ms="132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="invalidPassword(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:27:38 IST" name="invalidPassword" finished-at="2024-07-23T23:27:49 IST" duration-ms="11775" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.saucelabs.tests.LoginTests.invalidPassword(java.lang.reflect.Method)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidPassword -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:27:49 IST" name="closeApp" finished-at="2024-07-23T23:27:51 IST" duration-ms="1491" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:27:51 IST" name="launchApp" finished-at="2024-07-23T23:27:51 IST" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="invalidUsername(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:27:51 IST" name="invalidUsername" finished-at="2024-07-23T23:28:00 IST" duration-ms="8363" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.saucelabs.tests.LoginTests.invalidUsername(java.lang.reflect.Method)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidUsername -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:28:00 IST" name="closeApp" finished-at="2024-07-23T23:28:01 IST" duration-ms="1132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:28:01 IST" name="launchApp" finished-at="2024-07-23T23:28:01 IST" duration-ms="493" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="validCredentials(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:28:01 IST" name="validCredentials" finished-at="2024-07-23T23:28:14 IST" duration-ms="12528" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.saucelabs.tests.LoginTests.validCredentials(java.lang.reflect.Method)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validCredentials -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:28:14 IST" name="closeApp" finished-at="2024-07-23T23:28:16 IST" duration-ms="1955" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucelabs.tests.LoginTests@65c7a252]" started-at="2024-07-23T23:29:00 IST" name="tearDown" finished-at="2024-07-23T23:29:00 IST" duration-ms="542" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.saucelabs.tests.LoginTests -->
-    </test> <!-- Pixel_8_copy -->
-    <test started-at="2024-07-23T23:27:32 IST" name="Pixel_8" finished-at="2024-07-23T23:29:01 IST" duration-ms="88208">
-      <class name="com.saucelabs.tests.ProductTests">
-        <test-method is-config="true" signature="launchAppWithDeepLink()[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" started-at="2024-07-23T23:28:16 IST" name="launchAppWithDeepLink" finished-at="2024-07-23T23:28:19 IST" duration-ms="3062" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchAppWithDeepLink -->
-        <test-method signature="validateProductonProductDetailsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" started-at="2024-07-23T23:28:19 IST" name="validateProductonProductDetailsPage" finished-at="2024-07-23T23:28:47 IST" duration-ms="27898" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.saucelabs.tests.ProductTests.validateProductonProductDetailsPage(java.lang.reflect.Method)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateProductonProductDetailsPage -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" started-at="2024-07-23T23:28:47 IST" name="closeApp" finished-at="2024-07-23T23:28:48 IST" duration-ms="824" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="launchAppWithDeepLink()[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" started-at="2024-07-23T23:28:48 IST" name="launchAppWithDeepLink" finished-at="2024-07-23T23:28:51 IST" duration-ms="3455" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchAppWithDeepLink -->
-        <test-method signature="validateProductonProductsPage(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" started-at="2024-07-23T23:28:51 IST" name="validateProductonProductsPage" finished-at="2024-07-23T23:28:59 IST" duration-ms="7930" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.saucelabs.tests.ProductTests.validateProductonProductsPage(java.lang.reflect.Method)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateProductonProductsPage -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.ProductTests@27462a88]" started-at="2024-07-23T23:28:59 IST" name="closeApp" finished-at="2024-07-23T23:29:00 IST" duration-ms="1127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- com.saucelabs.tests.ProductTests -->
-      <class name="com.saucelabs.tests.LoginTests">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:32 IST" name="setup" finished-at="2024-07-23T23:27:38 IST" duration-ms="5151" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:33 IST" name="setup" finished-at="2024-07-26T23:39:39 IST" duration-ms="6383" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -218,11 +82,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:38 IST" name="launchApp" finished-at="2024-07-23T23:27:38 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:39 IST" name="launchApp" finished-at="2024-07-26T23:39:39 IST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="invalidPassword(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:38 IST" name="invalidPassword" finished-at="2024-07-23T23:27:49 IST" duration-ms="11741" status="PASS">
+        <test-method signature="invalidPassword(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:39 IST" name="invalidPassword" finished-at="2024-07-26T23:39:49 IST" duration-ms="9385" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -233,15 +97,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPassword -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:49 IST" name="closeApp" finished-at="2024-07-23T23:27:50 IST" duration-ms="972" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:49 IST" name="closeApp" finished-at="2024-07-26T23:39:50 IST" duration-ms="924" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:50 IST" name="launchApp" finished-at="2024-07-23T23:27:51 IST" duration-ms="476" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:50 IST" name="launchApp" finished-at="2024-07-26T23:39:50 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="invalidUsername(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:51 IST" name="invalidUsername" finished-at="2024-07-23T23:27:59 IST" duration-ms="8560" status="PASS">
+        <test-method signature="invalidUsername(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:50 IST" name="invalidUsername" finished-at="2024-07-26T23:39:57 IST" duration-ms="7348" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -252,15 +116,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidUsername -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:27:59 IST" name="closeApp" finished-at="2024-07-23T23:28:01 IST" duration-ms="1211" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:57 IST" name="closeApp" finished-at="2024-07-26T23:39:58 IST" duration-ms="878" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:28:01 IST" name="launchApp" finished-at="2024-07-23T23:28:01 IST" duration-ms="533" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:58 IST" name="launchApp" finished-at="2024-07-26T23:39:58 IST" duration-ms="171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="validCredentials(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:28:01 IST" name="validCredentials" finished-at="2024-07-23T23:28:14 IST" duration-ms="12816" status="PASS">
+        <test-method signature="validCredentials(java.lang.reflect.Method)[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:39:58 IST" name="validCredentials" finished-at="2024-07-26T23:40:08 IST" duration-ms="9898" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -271,11 +135,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validCredentials -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:28:14 IST" name="closeApp" finished-at="2024-07-23T23:28:16 IST" duration-ms="1781" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:40:08 IST" name="closeApp" finished-at="2024-07-26T23:40:09 IST" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucelabs.tests.LoginTests@2c1b194a]" started-at="2024-07-23T23:29:00 IST" name="tearDown" finished-at="2024-07-23T23:29:01 IST" duration-ms="517" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucelabs.tests.LoginTests@7bab3f1a]" started-at="2024-07-26T23:40:32 IST" name="tearDown" finished-at="2024-07-26T23:40:32 IST" duration-ms="467" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

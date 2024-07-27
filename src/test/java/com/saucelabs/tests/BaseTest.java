@@ -18,6 +18,7 @@ import com.saucelabs.driver.DriverManager;
 import com.saucelabs.enums.Config;
 import com.saucelabs.exceptions.DriverInvocationFailedException;
 import com.saucelabs.factories.DriverFactory;
+import com.saucelabs.utils.JsonUtils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.appmanagement.AndroidTerminateApplicationOptions;
@@ -42,6 +43,7 @@ public class BaseTest {
 			throw new DriverInvocationFailedException("Failed to invoke driver",e);
 		}
 
+		JsonUtils.initializeTestData();
 		MDC.put("ROUTINGKEY", FrameworkConstants.getNewLogFilePath(dname,ud));
 	}
 

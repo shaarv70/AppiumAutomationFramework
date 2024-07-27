@@ -7,9 +7,11 @@ import java.lang.reflect.Method;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.model.Log;
 import com.saucelabs.annotations.FrameworkAnnotation;
 import com.saucelabs.pages.LoginPage;
 import com.saucelabs.utils.JsonUtils;
+import com.saucelabs.utils.LoggingUtils;
 import com.saucelabs.utils.StaticTextUtils;
 
 public final class LoginTests extends BaseTest{
@@ -30,6 +32,8 @@ public final class LoginTests extends BaseTest{
 	   catch(Exception e)
 	   {
 		   log().error("Test "+m.getName()+" failed");
+		   log().info(e.getStackTrace().toString());
+		   
 	   }
 	   }
 
@@ -46,6 +50,7 @@ public final class LoginTests extends BaseTest{
 		catch(Exception e)
 		{
 			log().error("Test "+m.getName()+" failed");
+			log().info(e.getStackTrace().toString());
 		}
 		
 		
@@ -66,6 +71,7 @@ public final class LoginTests extends BaseTest{
 		catch(Exception e)
 		{
 			log().error("Test "+m.getName()+" failed");
+			log().info(e.getStackTrace().toString());
 		}
     		
 	}

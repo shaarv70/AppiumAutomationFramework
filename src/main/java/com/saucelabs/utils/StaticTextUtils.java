@@ -1,6 +1,7 @@
 package com.saucelabs.utils;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -29,11 +30,13 @@ public class StaticTextUtils {
 	try {
 		
     	//Get Document Builder
+		InputStream stream=ResourceLoader.getResource(FrameworkConstants.getStatictext());
 	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
+		
 		 
 		//Build Document
-		Document document = builder.parse(new File(FrameworkConstants.getStatictext()));
+		Document document = builder.parse(stream);
 		 
 		//Normalize the XML Structure; It's just too important !!
 		document.getDocumentElement().normalize();

@@ -31,6 +31,7 @@ public final class ProductTests extends BaseTest {
 		catch(Exception e)
 		{
 			log().error("Test "+m.getName()+" failed");
+			log().info(e.getStackTrace().toString());
 		}
 
 	}
@@ -41,7 +42,8 @@ public final class ProductTests extends BaseTest {
 
 		try {
 			log().info("*****************Starting validateProductonProductDetailsPage test**********************");
-			new ProductDetailPage().assertProductNameonDetailsPage(StaticTextUtils.getStaticText("product_name")).
+			
+			new ProductsPage().clickProduct().assertProductNameonDetailsPage(StaticTextUtils.getStaticText("product_name")).
 			assertProductDescription(StaticTextUtils.getStaticText("product_desc")).
 			assertProductPrice(StaticTextUtils.getStaticText("product_price")).
 			clickMenuIcon().clicklogout();
@@ -49,6 +51,7 @@ public final class ProductTests extends BaseTest {
 		catch(Exception e)
 		{
 			log().error("Test "+m.getName()+" failed");
+			log().info(e.getStackTrace().toString());
 		}
 
 	}
