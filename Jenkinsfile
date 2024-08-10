@@ -66,7 +66,7 @@ agent any
         stage('Run Tests'){
                
            steps{
-					 bat "DEVICE_PORT=${params.DEVICE_PORT} docker-compose up --pull=always"
+					 sh "DEVICE_PORT=${params.DEVICE_PORT} docker-compose up --pull=always"
                      
                      script{
                         
