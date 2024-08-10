@@ -192,7 +192,7 @@
 			</plugin>
 			<!--      To copy a specific folder from the project root directory to
 			the package directory -->
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<version>${maven.antrun.plugin}</version>
@@ -232,7 +232,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 
 		</plugins>
 
