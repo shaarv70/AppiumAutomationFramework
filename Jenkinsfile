@@ -48,7 +48,7 @@ agent any
              stage('Run Tests'){
                 steps{
 
-                     sh "docker-compose up --pull=always"
+                     sh "docker-compose up --pull=always --scale ${params.DEVICE_PORT}=1"
                      script{
                          if(fileExists('output/Regression/testng-failed.xml') ||fileExists('output/Release/testng-failed.xml'))
                          error('failed tests found')
