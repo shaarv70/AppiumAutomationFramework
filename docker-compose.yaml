@@ -14,7 +14,7 @@ services:
     ports:
       - "4723:4723"  # Expose the Appium port to the host
     deploy:
-      replicas: 0
+      replicas: 1
     volumes:
       - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog  # Persist logs
       - ./output/Regression:/home/appium-docker/test-output
