@@ -40,9 +40,9 @@ public class Listeners implements ITestListener, ISuiteListener{
 		PropertyUtils.initializeProperties();
 		PropertyUtils.urlProperties();
 		if(PropertyUtils.getProperty(Config.APPIUMREMOTE).equals("false")) {
-		 
-		server=DriverFactory.getAppiumService();
-	    	try {
+
+			server=DriverFactory.getAppiumService();
+			try {
 				if(!(checkIfAppiumServerIsRunnning(4723))) {
 					server.start();
 					server.clearOutPutStreams();//if we do not want to show server logs to console
@@ -52,27 +52,27 @@ public class Listeners implements ITestListener, ISuiteListener{
 					log().info("Server is already running");
 				}
 			} catch (Exception e) {
-				
-			throw new AppiumDriverLocalServiceException("Failed to check status of AppiumDriverLocalService" ,e);
+
+				throw new AppiumDriverLocalServiceException("Failed to check status of AppiumDriverLocalService" ,e);
 			}
-		
-		 }
-		
+
+		}
+
 		ExtentReport.initReports();
-	
+
 	}
 	@Override
 	public void onFinish(ISuite suite) {
-		
+
 		MDC.put("ROUTINGKEY", "ServerLogs");
 		ExtentReport.flushReports();
-		
+
 		if(PropertyUtils.getProperty(Config.APPIUMREMOTE).equals("false")) {
-		server.stop();
-		log().info("APPIUM SERVER STOPPED");
+			server.stop();
+			log().info("APPIUM SERVER STOPPED");
 		}
-		
-		
+
+
 		/* EmailUtils.sendReport(); */
 		//log().info("Report Sent");
 	}
@@ -81,18 +81,21 @@ public class Listeners implements ITestListener, ISuiteListener{
 	public void onTestStart(ITestResult result) {
 
 		try {
-		ExtentReport.createTest(result.getMethod().getMethodName());	
-		ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).author());
-		TestPropertiesUtils.testProperties(result);
-		ExtentReport.addCategory();   
+			ExtentReport.createTest(result.getMethod().getMethodName());	
+			ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).author());
+			TestPropertiesUtils.testProperties(result);
+			ExtentReport.addCategory();   
 		}
-		
+
 		catch(RuntimeException e)
 		{
 			throw new ExtentReportInvocationFailedException("Failed to invoke Extent Report",e);
 		}
-		((CanRecordScreen) Objects.requireNonNull(DriverManager.getDriver())).startRecordingScreen();
 
+		if(PropertyUtils.getProperty(Config.RECORDVIDEOS).equals("yes"))
+		{		((CanRecordScreen) Objects.requireNonNull(DriverManager.getDriver())).startRecordingScreen();
+
+		}
 	}
 
 	@Override
@@ -110,13 +113,13 @@ public class Listeners implements ITestListener, ISuiteListener{
 		}
 
 		if(PropertyUtils.getProperty(Config.SAVESCREENSHOTS).equals("yes")) {
-			
-				ScreenshotUtils.getScreenshot(result);
-			}
 
-		if(PropertyUtils.getProperty(Config.SAVEVIDEOS).equals("yes")) {
-		
-				VideoUtils.getVideo(result);
+			ScreenshotUtils.getScreenshot(result);
+		}
+
+		if(PropertyUtils.getProperty(Config.RECORDVIDEOS).equals("yes")) {
+
+			VideoUtils.getVideo(result);
 		}
 
 
