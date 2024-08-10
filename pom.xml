@@ -105,19 +105,19 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
 				<configuration>
-					<!--  mvn clean test -Dbrowser=chrome
-					-Dselenium.grid.enabled=true-->
+					<!--  mvn clean test -Dbrowser=chrom-->
 					<systemPropertyVariables>
-						<automationname>UiAutomator2</automationname>
-						<log4j.configurationFile>
-							logger/log4j2.xml</log4j.configurationFile>
+						<appiumremote>true</appiumremote>
+						<log4j.configurationFile>logger/log4j2.xml</log4j.configurationFile>
+						<apppath>src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk</apppath>
+						<udid>emulator-5554</udid>
+						<APPIUM_PORT>4724</APPIUM_PORT>
 					</systemPropertyVariables>
 					<suiteXmlFiles>
-						<file>src/test/resources/test-suites/testng.xml</file>
+						<file>src/test/resources/test-suites/master.xml</file>
 					</suiteXmlFiles>
-					<threadCount>2</threadCount>
 					<!--Reports will be generated in below path -->
-					<reportsDirectory>${project.build.directory}/extent-test-output</reportsDirectory>
+					<reportsDirectory>${project.build.directory}/test-output</reportsDirectory>
 				</configuration>
 			</plugin>
 			<!-- To copy all the dependencies to run our tests as part of "mvn

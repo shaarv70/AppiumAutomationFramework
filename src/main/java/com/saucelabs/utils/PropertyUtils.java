@@ -2,18 +2,20 @@ package com.saucelabs.utils;
 
 import static com.saucelabs.constants.FrameworkConstants.getConfigfilepath;
 import static com.saucelabs.utils.LoggingUtils.log;
+import static com.saucelabs.utils.PropertyUtils.getProperty;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.aventstack.extentreports.model.Log;
 import com.saucelabs.enums.Config;
 import com.saucelabs.exceptions.DataLoadingFailedException;
 import com.saucelabs.exceptions.KeyNotFoundException;
+
+import freemarker.log.Logger;
 
 public final class PropertyUtils {
 
@@ -47,7 +49,7 @@ public final class PropertyUtils {
 					prop.setProperty(key,System.getProperty(key)); 
 				}                                                     
 			}
-
+			
 			log().info("Test properties");
 
 			log().info("------------------------------------------");
@@ -55,11 +57,14 @@ public final class PropertyUtils {
 			{
 				log().info("{}={}",key,prop.getProperty(key));
 			}
+			log().info("udid={}",System.getProperty("udid"));
+			
 			setProp(prop);
 
 			for (Map.Entry<Object, Object> myentry : getProp().entrySet()) {
 				CONFIGMAP.put(String.valueOf(myentry.getKey()), String.valueOf(myentry.getValue()).trim());
 			}
+			
 
 		} catch (Exception e) {
 			// Log the exception and throw a runtime exception to handle it properly
@@ -68,6 +73,13 @@ public final class PropertyUtils {
 			throw new DataLoadingFailedException("Failed to load properties " + e);
 		}
 
+	}
+	
+	public static void urlProperties()
+	{
+		String url=String.format(getProperty(Config.URLFORMAT),getProperty(Config.HUBHOST),Integer.parseInt(System.getProperty("APPIUM_PORT")));
+		log().info("grid url: {}",url);
+		CONFIGMAP.put("url",url);
 	}
 
 	public static String getProperty(Config config) {

@@ -12,8 +12,7 @@ public final class FrameworkConstants {
 	private FrameworkConstants() {}
 
 
-//	private static final String RESOURCES=System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources";	
-	private static final String APPPATH= "app"+File.separator+"Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
+ //   private static final String RESOURCES=System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources";	
 	private static final String CONFIGFILEPATH="config"+File.separator+"config.properties";
 	private static final String TESTDATA="testData"+File.separator+"loginUsers.json";
 	private static final String STATICTEXT="staticData"+File.separator+"strings.xml";
@@ -23,21 +22,32 @@ public final class FrameworkConstants {
 	private static String EXTENTREPORTFILEPATH="";
 	private static String LOGFILEPATH="";
 	private static final String LOGFOLDERPATH="Logs"+File.separator;
-    private static final String DRIVEREXECUTABLE="C:"+File.separator+"Program Files"+File.separator+"nodejs"+File.separator+"node.exe";
-    private static final String APPIUMJS= "C:"+File.separator+"Users"+File.separator+"arvin"+File.separator+"AppData"+
+	private static final String REMOTEDRIVEREXECUTABLE="/usr/bin/node";
+	private static final String LOCALDRIVEREXECUTABLE="C:"+File.separator+"Program Files"+File.separator+"nodejs"+File.separator+"node.exe";
+	private static final String REMOTEAPPIUMJS="/usr/local/lib/node_modules/appium/build/lib/main.js";
+    private static final String LOCALAPPIUMJS= "C:"+File.separator+"Users"+File.separator+"arvin"+File.separator+"AppData"+
     										File.separator+"Roaming"+File.separator+"npm"+File.separator+"node_modules"+
     										File.separator+"appium"+File.separator+"build"+File.separator+"lib"+File.separator+"main.js";
     
-	
+    
+    public static String getRemotedriverexecutable() {
+		return REMOTEDRIVEREXECUTABLE;
+	}
+    
+    public static String getRemoteappiumjs() {
+		return REMOTEAPPIUMJS;
+	}
+   
+
     
     public static String getDriverexecutable() {
-		return DRIVEREXECUTABLE;
+		return LOCALDRIVEREXECUTABLE;
 	}
 
 
 
 	public static String getAppiumjs() {
-		return APPIUMJS;
+		return LOCALAPPIUMJS;
 	}
 
 
@@ -70,11 +80,6 @@ public final class FrameworkConstants {
 		return EXPLICITWAIT;
 	}
 
-	public static String getApppath() {
-
-		return APPPATH;
-	}
-
 	public static String getConfigfilepath() {
 		return CONFIGFILEPATH;
 	}
@@ -104,13 +109,13 @@ public final class FrameworkConstants {
 	
 	
 	
-	public static String getNewLogFilePath(String dname, String ud) 
+	public static String getNewLogFilePath(String dname) 
 	{          
 		
-		if(!createLogsFilePath(dname,ud).exists())
+		if(!createLogsFilePath(dname).exists())
 
 	{
-	        createLogsFilePath(dname,ud).mkdirs();
+	        createLogsFilePath(dname).mkdirs();
 	}
 		return LOGFILEPATH;
 		
@@ -120,9 +125,9 @@ public final class FrameworkConstants {
 	
 	
 	
-	public static File createLogsFilePath(String dname, String ud)
+	public static File createLogsFilePath(String dname)
 	{
-		    LOGFILEPATH=LOGFOLDERPATH+ud+"_"+dname;
+		    LOGFILEPATH=LOGFOLDERPATH+System.getProperty("udid")+"_"+dname;
 		
 			return new File(LOGFILEPATH);
 		

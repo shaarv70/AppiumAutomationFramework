@@ -31,20 +31,23 @@ public class BaseTest {
 
 
 	@BeforeTest
-	@Parameters({"emulator","platformName","deviceName","udid"})
-	protected  void setup(String eml,String pname, String dname, String ud) 
+	@Parameters({"emulator","platformName","deviceName"})
+	protected  void setup(String eml,String pname, String dname) 
 	{
+		MDC.put("ROUTINGKEY", FrameworkConstants.getNewLogFilePath(dname));
+		
 		try {
-			Driver.initializeDriver(eml,pname,dname, ud);
+			Driver.initializeDriver(eml,pname,dname);
 		}
 
 		catch(Exception e)
 		{
+			e.printStackTrace();
 			throw new DriverInvocationFailedException("Failed to invoke driver",e);
 		}
 
 		JsonUtils.initializeTestData();
-		MDC.put("ROUTINGKEY", FrameworkConstants.getNewLogFilePath(dname,ud));
+		
 	}
 
 

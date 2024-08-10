@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Suite"  thread-count="2" parallel="tests" >
+<suite name="Suite"  thread-count="2" >
 	<listeners>
 		<listener class-name="com.saucelabs.listeners.Listeners"/>
 	</listeners>
-  <test  name="Pixel_8">
+  <test  name="Pixel 7">
 	  <parameter name="emulator" value="true"/>
 	  <parameter name="platformName" value="Android"/>
-	  <parameter name="deviceName" value="pixel_8"/>
-      <parameter name="udid" value="emulator-5554"/>
+	  <parameter name="deviceName" value="pixel_7_pro"/>
     <classes>
 	  <class name="com.saucelabs.tests.LoginTests"/>
       <class name="com.saucelabs.tests.ProductTests"/>
@@ -18,7 +17,6 @@
 	  <parameter name="emulator" value="true"/>
 	  <parameter name="platformName" value="Android"/>
 	  <parameter name="deviceName" value="pixel_8"/>
-      <parameter name="udid" value="emulator-5556"/>
     <classes>
 	  <class name="com.saucelabs.tests.LoginTests"/>
       <class name="com.saucelabs.tests.ProductTests"/>

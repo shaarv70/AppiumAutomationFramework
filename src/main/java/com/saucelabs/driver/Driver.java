@@ -11,11 +11,11 @@ public final class Driver {
 	private Driver(){}
 	
 	
-	public static void initializeDriver(String emul,String pname, String dname, String ud) 
+	public static void initializeDriver(String emul,String pname, String dname) 
 	{
 		if(Objects.isNull(DriverManager.getDriver())) {
 
-		DriverManager.setDriver(DriverFactory.initialize(emul,pname, dname, ud));
+		DriverManager.setDriver(DriverFactory.initialize(emul,pname, dname));
 		    
 		}
 		

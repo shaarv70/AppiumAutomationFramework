@@ -4,12 +4,13 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.saucelabs.constants.FrameworkConstants;
+import com.saucelabs.enums.Config;
 import com.saucelabs.exceptions.ExtentReportInvocationFailedException;
+import com.saucelabs.utils.PropertyUtils;
 import com.saucelabs.utils.TestPropertiesUtils;
 
 
@@ -51,15 +52,17 @@ public final class ExtentReport {
 
 		ExtentManager.unload();
 
+		if(PropertyUtils.getProperty(Config.APPIUMREMOTE).equals("false")) {
+		
 		try { 
-			Desktop.getDesktop().browse(new File(FrameworkConstants.getNEWFILEPATH()).toURI()); 
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getNEWFILEPATH()).toURI());
 		}
-
-		catch (IOException e) {
-
-			e.printStackTrace(); 
-
+		catch(Exception e)
+		{
+			e.printStackTrace();
 		}
+		
+}
 
 	}
 
@@ -81,7 +84,7 @@ public final class ExtentReport {
 	public static void addCategory()
 	{
 
-		ExtentManager.getTest().assignCategory(TestPropertiesUtils.getCONFIGMAP().get("udid"));
+		ExtentManager.getTest().assignCategory(System.getProperty("udid"));
 
 	}
 

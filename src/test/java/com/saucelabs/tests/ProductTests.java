@@ -30,7 +30,7 @@ public final class ProductTests extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			log().info(e.getStackTrace().toString());
+			log().info(e.getMessage());
 			log().error("Test "+m.getName()+" failed");
 			
 		}
@@ -51,7 +51,7 @@ public final class ProductTests extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			log().info(e.getStackTrace().toString());
+			log().info(e.getMessage());
 			log().error("Test "+m.getName()+" failed");
 			
 		}

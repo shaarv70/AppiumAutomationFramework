@@ -25,7 +25,7 @@
     </Routing>
   </Appenders>
   <Loggers>
-    <Logger name="com.saucelabs" level="INFO" additivity="false">
+    <Logger name="com.saucelabs" level="Info" additivity="false">
       <AppenderRef ref="STDOUT"/>
       <AppenderRef ref="MyRoutingAppender"/>
     </Logger>

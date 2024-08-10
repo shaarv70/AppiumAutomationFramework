@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  
+  Regression:
+    image: trial
+    environment:
+      - APPIUM_PORT=4723
+      - TEST_SUITE=master.xml
+      - DEVICE_PORT
+    env_file: .env  
+    networks:
+      - test-network
+    ports:
+      - "4723:4723"  # Expose the Appium port to the host
+    volumes:
+      - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog  # Persist logs
+      - ./output/Regression:/home/appium-docker/test-output
+
+  Release:
+    image: trial
+    environment:
+      - APPIUM_PORT=4724
+      - TEST_SUITE=master.xml
+      - DEVICE_PORT
+    env_file: .env
+    networks:
+      - test-network
+    ports:
+      - "4724:4724"  
+    volumes:
+      - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog  # Persist logs
+      - ./output/Release:/home/appium-docker/test-output
+    
+
+  # Define more test suite services as needed
+
+networks:
+  test-network:
+    driver: bridge

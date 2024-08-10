@@ -1,58 +1,163 @@
-[ServerLogs INFO ] 2024-07-27 13:01:39.127 Listeners:46 - APPIUM SERVER STARTED
-[ServerLogs INFO ] 2024-07-27 13:01:39.153 PropertyUtils:51 - Test properties
-[ServerLogs INFO ] 2024-07-27 13:01:39.153 PropertyUtils:53 - ------------------------------------------
-[ServerLogs INFO ] 2024-07-27 13:01:39.160 PropertyUtils:56 - overridereports=yes
-[ServerLogs INFO ] 2024-07-27 13:01:39.162 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
-[ServerLogs INFO ] 2024-07-27 13:01:39.162 PropertyUtils:56 - failedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 13:01:39.162 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
-[ServerLogs INFO ] 2024-07-27 13:01:39.166 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
-[ServerLogs INFO ] 2024-07-27 13:01:39.166 PropertyUtils:56 - savescreenshots=yes
-[ServerLogs INFO ] 2024-07-27 13:01:39.166 PropertyUtils:56 - automationname=UiAutomator2
-[ServerLogs INFO ] 2024-07-27 13:01:39.167 PropertyUtils:56 - savevideos=yes
-[ServerLogs INFO ] 2024-07-27 13:01:39.167 PropertyUtils:56 - passedstepsscreenshot=no
-[ServerLogs INFO ] 2024-07-27 13:01:39.167 PropertyUtils:56 - skippedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 13:02:23.006 Listeners:67 - APPIUM SERVER STOPPED
-[ServerLogs INFO ] 2024-07-27 13:02:23.007 Listeners:69 - Report Sent
-[ServerLogs INFO ] 2024-07-27 13:35:58.739 Listeners:46 - APPIUM SERVER STARTED
-[ServerLogs INFO ] 2024-07-27 13:35:58.782 PropertyUtils:51 - Test properties
-[ServerLogs INFO ] 2024-07-27 13:35:58.783 PropertyUtils:53 - ------------------------------------------
-[ServerLogs INFO ] 2024-07-27 13:35:58.789 PropertyUtils:56 - overridereports=yes
-[ServerLogs INFO ] 2024-07-27 13:35:58.790 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
-[ServerLogs INFO ] 2024-07-27 13:35:58.790 PropertyUtils:56 - failedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 13:35:58.790 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
-[ServerLogs INFO ] 2024-07-27 13:35:58.791 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
-[ServerLogs INFO ] 2024-07-27 13:35:58.791 PropertyUtils:56 - savescreenshots=yes
-[ServerLogs INFO ] 2024-07-27 13:35:58.792 PropertyUtils:56 - automationname=UiAutomator2
-[ServerLogs INFO ] 2024-07-27 13:35:58.792 PropertyUtils:56 - savevideos=yes
-[ServerLogs INFO ] 2024-07-27 13:35:58.793 PropertyUtils:56 - passedstepsscreenshot=no
-[ServerLogs INFO ] 2024-07-27 13:35:58.793 PropertyUtils:56 - skippedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 13:36:59.520 Listeners:67 - APPIUM SERVER STOPPED
-[ServerLogs INFO ] 2024-07-27 13:36:59.520 Listeners:69 - Report Sent
-[ServerLogs INFO ] 2024-07-27 13:39:13.154 Listeners:46 - APPIUM SERVER STARTED
-[ServerLogs INFO ] 2024-07-27 13:39:13.181 PropertyUtils:51 - Test properties
-[ServerLogs INFO ] 2024-07-27 13:39:13.182 PropertyUtils:53 - ------------------------------------------
-[ServerLogs INFO ] 2024-07-27 13:39:13.192 PropertyUtils:56 - overridereports=yes
-[ServerLogs INFO ] 2024-07-27 13:39:13.192 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
-[ServerLogs INFO ] 2024-07-27 13:39:13.193 PropertyUtils:56 - failedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 13:39:13.193 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
-[ServerLogs INFO ] 2024-07-27 13:39:13.194 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
-[ServerLogs INFO ] 2024-07-27 13:39:13.194 PropertyUtils:56 - savescreenshots=yes
-[ServerLogs INFO ] 2024-07-27 13:39:13.195 PropertyUtils:56 - automationname=UiAutomator2
-[ServerLogs INFO ] 2024-07-27 13:39:13.195 PropertyUtils:56 - savevideos=yes
-[ServerLogs INFO ] 2024-07-27 13:39:13.196 PropertyUtils:56 - passedstepsscreenshot=no
-[ServerLogs INFO ] 2024-07-27 13:39:13.196 PropertyUtils:56 - skippedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 13:40:13.402 Listeners:67 - APPIUM SERVER STOPPED
-[ServerLogs INFO ] 2024-07-27 13:40:13.402 Listeners:69 - Report Sent
-[ServerLogs INFO ] 2024-07-27 14:58:58.404 Listeners:46 - APPIUM SERVER STARTED
-[ServerLogs INFO ] 2024-07-27 14:58:58.443 PropertyUtils:51 - Test properties
-[ServerLogs INFO ] 2024-07-27 14:58:58.444 PropertyUtils:53 - ------------------------------------------
-[ServerLogs INFO ] 2024-07-27 14:58:58.456 PropertyUtils:56 - overridereports=yes
-[ServerLogs INFO ] 2024-07-27 14:58:58.457 PropertyUtils:56 - appiumurl=http://0.0.0.0:4723
-[ServerLogs INFO ] 2024-07-27 14:58:58.457 PropertyUtils:56 - failedstepsscreenshot=yes
-[ServerLogs INFO ] 2024-07-27 14:58:58.458 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
-[ServerLogs INFO ] 2024-07-27 14:58:58.458 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
-[ServerLogs INFO ] 2024-07-27 14:58:58.460 PropertyUtils:56 - savescreenshots=yes
-[ServerLogs INFO ] 2024-07-27 14:58:58.461 PropertyUtils:56 - automationname=UiAutomator2
-[ServerLogs INFO ] 2024-07-27 14:58:58.462 PropertyUtils:56 - savevideos=yes
-[ServerLogs INFO ] 2024-07-27 14:58:58.462 PropertyUtils:56 - passedstepsscreenshot=no
-[ServerLogs INFO ] 2024-07-27 14:58:58.462 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:06:54.810 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-08-10 13:06:54.860 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 13:06:54.882 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 13:06:54.883 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:06:54.883 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 13:06:54.884 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 13:06:54.884 PropertyUtils:56 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 13:06:54.885 PropertyUtils:56 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 13:06:54.886 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 13:06:54.886 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 13:06:54.886 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 13:06:54.886 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 13:06:54.886 PropertyUtils:56 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 13:06:54.887 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:06:54.887 PropertyUtils:56 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 13:06:54.887 PropertyUtils:58 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 13:06:57.053 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 13:06:57.976 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 13:07:41.989 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-08-10 13:07:42.025 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 13:07:42.038 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 13:07:42.039 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:07:42.039 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 13:07:42.040 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 13:07:42.040 PropertyUtils:56 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 13:07:42.040 PropertyUtils:56 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 13:07:42.041 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 13:07:42.041 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 13:07:42.041 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 13:07:42.041 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 13:07:42.042 PropertyUtils:56 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 13:07:42.042 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:07:42.042 PropertyUtils:56 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 13:07:42.042 PropertyUtils:58 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 13:07:44.224 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 13:07:44.945 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 13:10:15.325 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-08-10 13:10:15.360 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 13:10:15.372 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 13:10:15.373 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:10:15.373 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 13:10:15.373 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 13:10:15.373 PropertyUtils:56 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 13:10:15.374 PropertyUtils:56 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 13:10:15.374 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 13:10:15.374 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 13:10:15.375 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 13:10:15.375 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 13:10:15.375 PropertyUtils:56 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 13:10:15.376 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:10:15.376 PropertyUtils:56 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 13:10:15.377 PropertyUtils:58 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 13:10:17.276 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 13:10:17.983 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 13:15:53.848 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-08-10 13:15:53.882 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 13:15:53.894 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 13:15:53.895 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:15:53.896 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 13:15:53.896 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 13:15:53.897 PropertyUtils:56 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 13:15:53.897 PropertyUtils:56 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 13:15:53.897 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 13:15:53.898 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 13:15:53.898 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 13:15:53.898 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 13:15:53.898 PropertyUtils:56 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 13:15:53.899 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:15:53.899 PropertyUtils:56 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 13:15:53.899 PropertyUtils:58 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 13:15:56.106 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 13:15:56.815 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 13:20:47.737 PropertyUtils:51 - Test properties
+[ServerLogs INFO ] 2024-08-10 13:20:47.773 PropertyUtils:53 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 13:20:47.786 PropertyUtils:56 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 13:20:47.787 PropertyUtils:56 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:20:47.787 PropertyUtils:56 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 13:20:47.787 PropertyUtils:56 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 13:20:47.788 PropertyUtils:56 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 13:20:47.789 PropertyUtils:56 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 13:20:47.789 PropertyUtils:56 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 13:20:47.791 PropertyUtils:56 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 13:20:47.791 PropertyUtils:56 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 13:20:47.791 PropertyUtils:56 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 13:20:47.791 PropertyUtils:56 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 13:20:47.792 PropertyUtils:56 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 13:20:47.792 PropertyUtils:56 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 13:20:47.793 PropertyUtils:58 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 13:20:49.642 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 13:21:46.747 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 15:11:23.558 PropertyUtils:53 - Test properties
+[ServerLogs INFO ] 2024-08-10 15:11:23.618 PropertyUtils:55 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 15:11:23.642 PropertyUtils:58 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 15:11:23.642 PropertyUtils:58 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 15:11:23.643 PropertyUtils:58 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 15:11:23.644 PropertyUtils:58 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 15:11:23.644 PropertyUtils:58 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 15:11:23.645 PropertyUtils:58 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 15:11:23.646 PropertyUtils:58 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 15:11:23.647 PropertyUtils:58 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 15:11:23.647 PropertyUtils:58 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 15:11:23.648 PropertyUtils:58 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 15:11:23.649 PropertyUtils:58 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 15:11:23.650 PropertyUtils:58 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 15:11:23.650 PropertyUtils:58 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 15:11:23.650 PropertyUtils:60 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 15:19:51.731 PropertyUtils:53 - Test properties
+[ServerLogs INFO ] 2024-08-10 15:19:51.789 PropertyUtils:55 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 15:19:51.805 PropertyUtils:58 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 15:19:51.807 PropertyUtils:58 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 15:19:51.808 PropertyUtils:58 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 15:19:51.809 PropertyUtils:58 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 15:19:51.809 PropertyUtils:58 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 15:19:51.810 PropertyUtils:58 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 15:19:51.811 PropertyUtils:58 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 15:19:51.811 PropertyUtils:58 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 15:19:51.812 PropertyUtils:58 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 15:19:51.812 PropertyUtils:58 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 15:19:51.812 PropertyUtils:58 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 15:19:51.813 PropertyUtils:58 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 15:19:51.813 PropertyUtils:58 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 15:19:51.814 PropertyUtils:60 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 15:19:51.817 PropertyUtils:81 - grid url: http://0.0.0.0:4724
+[ServerLogs INFO ] 2024-08-10 15:19:54.618 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 15:20:56.248 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 18:02:20.874 PropertyUtils:53 - Test properties
+[ServerLogs INFO ] 2024-08-10 18:02:20.893 PropertyUtils:55 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 18:02:20.898 PropertyUtils:58 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 18:02:20.899 PropertyUtils:58 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 18:02:20.899 PropertyUtils:58 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 18:02:20.899 PropertyUtils:58 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 18:02:20.899 PropertyUtils:58 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 18:02:20.899 PropertyUtils:58 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 18:02:20.901 PropertyUtils:58 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 18:02:20.901 PropertyUtils:58 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 18:02:20.901 PropertyUtils:58 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 18:02:20.901 PropertyUtils:58 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 18:02:20.902 PropertyUtils:58 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 18:02:20.902 PropertyUtils:58 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 18:02:20.902 PropertyUtils:58 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 18:02:20.903 PropertyUtils:60 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 18:02:20.904 PropertyUtils:81 - grid url: http://0.0.0.0:4724
+[ServerLogs INFO ] 2024-08-10 18:02:23.978 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 18:03:20.494 Listeners:72 - APPIUM SERVER STOPPED
+[ServerLogs INFO ] 2024-08-10 20:28:32.261 PropertyUtils:53 - Test properties
+[ServerLogs INFO ] 2024-08-10 20:28:32.288 PropertyUtils:55 - ------------------------------------------
+[ServerLogs INFO ] 2024-08-10 20:28:32.296 PropertyUtils:58 - overridereports=yes
+[ServerLogs INFO ] 2024-08-10 20:28:32.297 PropertyUtils:58 - failedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 20:28:32.298 PropertyUtils:58 - apppackage=com.swaglabsmobileapp
+[ServerLogs INFO ] 2024-08-10 20:28:32.299 PropertyUtils:58 - savescreenshots=yes
+[ServerLogs INFO ] 2024-08-10 20:28:32.299 PropertyUtils:58 - appiumremote=false
+[ServerLogs INFO ] 2024-08-10 20:28:32.300 PropertyUtils:58 - urlformat=http://%s:%d
+[ServerLogs INFO ] 2024-08-10 20:28:32.300 PropertyUtils:58 - automationname=UiAutomator2
+[ServerLogs INFO ] 2024-08-10 20:28:32.301 PropertyUtils:58 - savevideos=yes
+[ServerLogs INFO ] 2024-08-10 20:28:32.301 PropertyUtils:58 - passedstepsscreenshot=no
+[ServerLogs INFO ] 2024-08-10 20:28:32.302 PropertyUtils:58 - appactivity=com.swaglabsmobileapp.MainActivity
+[ServerLogs INFO ] 2024-08-10 20:28:32.302 PropertyUtils:58 - hubhost=0.0.0.0
+[ServerLogs INFO ] 2024-08-10 20:28:32.303 PropertyUtils:58 - skippedstepsscreenshot=yes
+[ServerLogs INFO ] 2024-08-10 20:28:32.303 PropertyUtils:58 - apppath=src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+[ServerLogs INFO ] 2024-08-10 20:28:32.304 PropertyUtils:60 - udid=emulator-5554
+[ServerLogs INFO ] 2024-08-10 20:28:32.306 PropertyUtils:81 - grid url: http://0.0.0.0:4724
+[ServerLogs INFO ] 2024-08-10 20:28:37.134 Listeners:49 - APPIUM SERVER STARTED
+[ServerLogs INFO ] 2024-08-10 20:29:44.702 Listeners:72 - APPIUM SERVER STOPPED

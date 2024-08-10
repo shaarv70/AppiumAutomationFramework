@@ -1,10 +1,10 @@
 package com.saucelabs.factories;
 
+import static com.saucelabs.utils.LoggingUtils.log;
 import static com.saucelabs.utils.PropertyUtils.getProperty;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.ServerSocket;
 import java.net.URL;
 import java.time.Duration;
@@ -27,94 +27,95 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 
 public final  class DriverFactory {
-	
-	
-	
+
+
+
 	private DriverFactory() {}
-	
-	
-	public static AppiumDriver initialize(String emul,String platformname, String devicename, String udid)
+
+
+	public static AppiumDriver initialize(String emul,String platformname, String devicename)
 	{
-		
+
 		AppiumDriver driver = null;
 		try {
 			DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setCapability("platformName",platformname);
-			caps.setCapability("deviceName", devicename);
-			caps.setCapability("automationName",getProperty(Config.AUTOMATIONNAME));
+	//		caps.setCapability("deviceName", devicename);
+			caps.setCapability("appium:automationName",getProperty(Config.AUTOMATIONNAME));
 			if(emul.equalsIgnoreCase("true")) {
-			caps.setCapability("udid", udid);
-			caps.setCapability("adv", devicename);
-			caps.setCapability("newCommandTimeout",400);
-			/*
-			 * caps.setCapability("systemPort",sPort);
-			 * caps.setCapability("chromeDriverPort",cPort);
-			 */
+				caps.setCapability("appium:udid", System.getProperty("udid"));
+				caps.setCapability("appium:deviceName", devicename);
+				caps.setCapability("appium:newCommandTimeout",400);
+				caps.setCapability("appWaitDuration", 10000);
+				/*
+				 * caps.setCapability("systemPort",sPort);
+				 * caps.setCapability("chromeDriverPort",cPort);
+				 */
 			}
 			//else{	caps.setCapability("udid", udid);}//here udid of realdevice will be fetched from testng.xml
-		  // caps.setCapability("appPackage",getProperty(Config.APPPACKAGE));
-		 // caps.setCapability("appActivity",getProperty(Config.APPACTIVITY));
-			//caps.setCapability("app",getApppath());
-			
-			
-			URL url = new URL(getProperty(Config.APPIUMURL));
-		    driver= new AndroidDriver(url,caps); 
+			caps.setCapability("appium:app",System.getProperty("apppath"));
+			caps.setCapability("appium:appPackage",getProperty(Config.APPPACKAGE));
+			caps.setCapability("appium:appActivity",getProperty(Config.APPACTIVITY));
+			URL url = new URL(getProperty(Config.URL));
+			driver= new AndroidDriver(url,caps); 
 
 		}
-		catch (NullPointerException | MalformedURLException e)
+		catch (Exception e)
 		{
 			throw new DriverInvocationFailedException("Failed to invoke driver" , e);
 		}
 
 		return driver;
-    }
-	
+	}
+
 	public static void initialize(String url){
-		
+
 		HashMap<String,String> deepUrl= new HashMap<>();
 		deepUrl.put("url", url);
 		deepUrl.put("package",getProperty(Config.APPPACKAGE));
 		DriverManager.getDriver().executeScript("mobile:deepLink", deepUrl);
 	}
-	
+
 	public static AppiumDriverLocalService getAppiumService()//Another utlity if we want to run appium server with certain properties
 	{
+		
+		
 		return  AppiumDriverLocalService.buildService(new AppiumServiceBuilder().
 				usingDriverExecutable(new File(FrameworkConstants.getDriverexecutable())).
 				withAppiumJS(new File(FrameworkConstants.getAppiumjs())).
-				usingPort(4723).
+				usingPort(Integer.parseInt(System.getProperty("APPIUM_PORT"))).
 				withTimeout(Duration.ofSeconds(10)).
 				withArgument(GeneralServerFlag.SESSION_OVERRIDE).
 				withLogOutput(ByteStreams.nullOutputStream()).
-			    withLogFile(new File("ServerLogs\\server.log")));
+				withLogFile(new File("ServerLogs\\server.log")));
 	}
-	
+
 	public static AppiumDriverLocalService getDefaultService()
 	{
 		return AppiumDriverLocalService.buildDefaultService();
 	}
-	
-	
-	public static boolean checkIfAppiumServerIsRunnning(int port) throws Exception {
-	    boolean isAppiumServerRunning = false;
-	    ServerSocket socket;
-	    try {
-	        socket = new ServerSocket(port);
-	        socket.close();
-	    } catch (IOException e) {
-	        isAppiumServerRunning = true;
-	    } finally {
-	        socket=null;
-	    }
-	    return isAppiumServerRunning;
-	}
-	
-	
-	
 
-	
-	
-	
-	
+
+	public static boolean checkIfAppiumServerIsRunnning(int port) throws Exception {
+		boolean isAppiumServerRunning = false;
+		ServerSocket socket;
+		try {
+			socket = new ServerSocket(port);
+			socket.close();
+		} catch (IOException e) {
+			isAppiumServerRunning = true;
+		} finally {
+			socket=null;
+		}
+		return isAppiumServerRunning;
+	}
+
+
+
+
+
+
+
+
 
 }

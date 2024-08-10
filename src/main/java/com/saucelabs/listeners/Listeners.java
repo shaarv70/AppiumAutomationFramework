@@ -37,9 +37,12 @@ public class Listeners implements ITestListener, ISuiteListener{
 	public void onStart(ISuite suite) {
 
 		MDC.put("ROUTINGKEY", "ServerLogs");
+		PropertyUtils.initializeProperties();
+		PropertyUtils.urlProperties();
+		if(PropertyUtils.getProperty(Config.APPIUMREMOTE).equals("false")) {
+		 
 		server=DriverFactory.getAppiumService();
-	
-			try {
+	    	try {
 				if(!(checkIfAppiumServerIsRunnning(4723))) {
 					server.start();
 					server.clearOutPutStreams();//if we do not want to show server logs to console
@@ -53,20 +56,25 @@ public class Listeners implements ITestListener, ISuiteListener{
 			throw new AppiumDriverLocalServiceException("Failed to check status of AppiumDriverLocalService" ,e);
 			}
 		
-	 
-		PropertyUtils.initializeProperties();
+		 }
+		
 		ExtentReport.initReports();
+	
 	}
-
 	@Override
 	public void onFinish(ISuite suite) {
 		
 		MDC.put("ROUTINGKEY", "ServerLogs");
 		ExtentReport.flushReports();
+		
+		if(PropertyUtils.getProperty(Config.APPIUMREMOTE).equals("false")) {
 		server.stop();
 		log().info("APPIUM SERVER STOPPED");
+		}
+		
+		
 		/* EmailUtils.sendReport(); */
-		log().info("Report Sent");
+		//log().info("Report Sent");
 	}
 
 	@Override
