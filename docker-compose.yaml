@@ -3,7 +3,7 @@ version: '3.8'
 services:
   
   Regression:
-    image: trial
+    image: shaarv70/appium
     environment:
       - APPIUM_PORT=4723
       - TEST_SUITE=master.xml
@@ -20,7 +20,7 @@ services:
       - ./output/Regression:/home/appium-docker/test-output
 
   Release:
-    image: trial
+    image: shaarv70/appium
     environment:
       - APPIUM_PORT=4724
       - TEST_SUITE=master.xml
