@@ -1,5 +1,6 @@
 services:
- Regression:
+ 
+  Regression:
     image: shaarv70/appium
     environment:
       - APPIUM_PORT=4723
