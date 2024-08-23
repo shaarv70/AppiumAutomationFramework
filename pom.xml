@@ -107,7 +107,7 @@
 				<configuration>
 					<!--  mvn clean test -Dbrowser=chrom-->
 					<systemPropertyVariables>
-						<appiumremote>true</appiumremote>
+						<appiumremote>false</appiumremote>
 						<log4j.configurationFile>logger/log4j2.xml</log4j.configurationFile>
 						<apppath>src/test/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk</apppath>
 						<udid>emulator-5554</udid>

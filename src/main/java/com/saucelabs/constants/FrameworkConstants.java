@@ -25,7 +25,7 @@ public final class FrameworkConstants {
 	private static final String REMOTEDRIVEREXECUTABLE="/usr/bin/node";
 	private static final String LOCALDRIVEREXECUTABLE="C:"+File.separator+"Program Files"+File.separator+"nodejs"+File.separator+"node.exe";
 	private static final String REMOTEAPPIUMJS="/usr/local/lib/node_modules/appium/build/lib/main.js";
-    private static final String LOCALAPPIUMJS= "C:"+File.separator+"Users"+File.separator+"arvin"+File.separator+"AppData"+
+    private static final String LOCALAPPIUMJS= "C:"+File.separator+"Users"+File.separator+"Asus"+File.separator+"AppData"+
     										File.separator+"Roaming"+File.separator+"npm"+File.separator+"node_modules"+
     										File.separator+"appium"+File.separator+"build"+File.separator+"lib"+File.separator+"main.js";
     

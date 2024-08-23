@@ -18,7 +18,7 @@ agent any
                script {
        
                     // Define the source and destination paths
-                    def sourcePath = 'C:\\Users\\arvin\\ApppiumApp\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'
+                    def sourcePath = 'C:\\Users\\Asus\\ApppiumApp\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'
                     def destinationPath = "${env.WORKSPACE}\\src\\test\\resources\\app\\"
 
                     // Copy the APK file using xcopy
