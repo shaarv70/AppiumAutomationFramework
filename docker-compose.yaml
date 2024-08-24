@@ -4,16 +4,16 @@ services:
     environment:
       - APPIUM_PORT=4723
       - TEST_SUITE=master.xml
-      - DEVICE_PORT
-    env_file: .env  
+      - DEVICE_PORT=${DEVICE_PORT}
+    env_file: .env
     networks:
       - test-network
     ports:
-      - "4723:4723"  # Expose the Appium port to the host
+      - "4723:4723"
     deploy:
-      replicas: 1
+      replicas: 0
     volumes:
-      - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog  # Persist logs
+      - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog
       - ./output/Regression:/home/appium-docker/test-output
 
   Release:
@@ -21,20 +21,17 @@ services:
     environment:
       - APPIUM_PORT=4724
       - TEST_SUITE=master.xml
-      - DEVICE_PORT
+      - DEVICE_PORT=${DEVICE_PORT}
     env_file: .env
     networks:
       - test-network
     ports:
       - "4724:4724"
     deploy:
-      replicas: 0    
+      replicas: 0
     volumes:
-      - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog  # Persist logs
+      - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog
       - ./output/Release:/home/appium-docker/test-output
-    
-
-  # Define more test suite services as needed
 
 networks:
   test-network:
