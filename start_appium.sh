@@ -30,9 +30,6 @@ function start_appium () {
 # Start the Appium server in the background
 start_appium
 
-# Wait for the Appium server to start
-sleep 20
-
 # Execute your runner.sh script and show its logs on the console
 /home/appium-docker/runner.sh
 
