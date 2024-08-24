@@ -68,7 +68,7 @@ RUN dos2unix start_appium.sh runner.sh
 RUN chmod +x start_appium.sh
 
 # Start Appium server and then run the runner.sh script
-ENTRYPOINT ["/bin/bash", "/home/appium-docker/start_appium.sh"]
+ENTRYPOINT sh start_appium.sh
  
 
 
