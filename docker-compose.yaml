@@ -1,13 +1,10 @@
-version: '3.8'
-
 services:
   Regression:
-    image: shaarv70/appium
+    image: trial
     environment:
       - APPIUM_PORT=4723
       - TEST_SUITE=master.xml
       - DEVICE_PORT=${DEVICE_PORT}
-    env_file: .env
     networks:
       - test-network
     ports:
@@ -24,7 +21,6 @@ services:
       - APPIUM_PORT=4724
       - TEST_SUITE=master.xml
       - DEVICE_PORT=${DEVICE_PORT}
-    env_file: .env
     networks:
       - test-network
     ports:
