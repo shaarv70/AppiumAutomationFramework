@@ -7,7 +7,7 @@
   <test  name="Pixel 7">
 	  <parameter name="emulator" value="true"/>
 	  <parameter name="platformName" value="Android"/>
-	  <parameter name="deviceName" value="Pixel 7 (Edited)"/>
+	  <parameter name="deviceName" value="pixel_7"/>
     <classes>
 	  <class name="com.saucelabs.tests.LoginTests"/>
       <class name="com.saucelabs.tests.ProductTests"/>
