@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   Regression:
     image: shaarv70/appium
@@ -36,3 +38,6 @@ services:
 networks:
   test-network:
     driver: bridge
+
+x-environment-variables:
+  COMPOSE_HTTP_TIMEOUT: 300

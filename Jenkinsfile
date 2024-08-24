@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        COMPOSE_HTTP_TIMEOUT = 300
+        DOCKER_CLI_TIMEOUT = 300  // Optional but recommended
+    }
+
     parameters {
         choice(name: 'SERVICE', choices: ['Regression', 'Release'], description: 'Select the service to run')
         choice(name: 'DEVICE_PORT', choices: ['5555', '5557'], description: 'Select the device port')
@@ -43,12 +48,17 @@ pipeline {
             }
         }
 
+ 		stage('Pre-pull Docker Image') {
+            steps {
+               		bat "docker pull shaarv70/appium:latest"
+            }
+        }
         stage('Run Tests') {
             steps {
                 script {
                     def service = params.SERVICE
-                    bat "docker-compose up --pull=always --scale ${service}=1 --force-recreate"
-                }
+                    bat "docker-compose up --pull=always --scale ${service}=1"
+               	  }
 
                 script {
                     def failedTestFound = fileExists("output/${params.SERVICE}/testng-failed.xml")
@@ -62,10 +72,15 @@ pipeline {
 
     post {
         always {
-            bat "docker-compose down"
-            bat "docker logout"
-            bat "docker image rm shaarv70/appium:latest"
-            bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
+            stage('Cleanup') {
+                steps {
+                    bat "docker-compose down --rmi all --volumes --remove-orphans"
+                    bat "docker system prune -f"
+                    bat "docker logout"
+                    bat "docker image rm shaarv70/appium:latest"
+                    bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
+                }
+            }
             archiveArtifacts artifacts: 'extent-test-output/report.html', followSymlinks: false
         }
     }
