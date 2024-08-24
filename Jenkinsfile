@@ -72,16 +72,15 @@ pipeline {
 
     post {
         always {
-            stage('Cleanup') {
-                steps {
+           
+           			archiveArtifacts artifacts: 'extent-test-output/report.html', followSymlinks: false
                     bat "docker-compose down --rmi all --volumes --remove-orphans"
                     bat "docker system prune -f"
                     bat "docker logout"
                     bat "docker image rm shaarv70/appium:latest"
                     bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
-                }
-            }
-            archiveArtifacts artifacts: 'extent-test-output/report.html', followSymlinks: false
-        }
-    }
+                
+            	
+        		}
+    	}
 }
