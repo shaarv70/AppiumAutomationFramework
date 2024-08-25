@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                bat "docker build -t=shaarv70/appium:latest ."
+                bat "docker build --no-cache -t=shaarv70/appium:latest ."
             }
         }
 
@@ -58,7 +58,7 @@ pipeline {
                 script {
                     def service = params.SERVICE
                     bat """
-                        export DEVICE_PORT=${DEVICE_PORT}
+                        set DEVICE_PORT=${DEVICE_PORT}
                         docker-compose up --scale ${SERVICE}=1
                     """
                	  }
