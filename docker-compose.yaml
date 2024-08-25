@@ -14,7 +14,7 @@ services:
     volumes:
       - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog
       - ./output/Regression:/home/appium-docker/extent-test-output
-	  - ./output/Regression:/home/appium-docker/test-output
+      - ./output/Regression:/home/appium-docker/test-output
 
   Release:
     image: shaarv70/appium
@@ -31,7 +31,7 @@ services:
     volumes:
       - ./RemoteServerlogs:/home/appium-docker/RemoteServerLog
       - ./output/Release:/home/appium-docker/extent-test-output
-	  - ./output/Release:/home/appium-docker/test-output
+      - ./output/Release:/home/appium-docker/test-output
 
 networks:
   test-network:
