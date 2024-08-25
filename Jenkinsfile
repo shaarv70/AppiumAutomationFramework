@@ -50,7 +50,7 @@ pipeline {
 
  		stage('Pre-pull Docker Image') {
             steps {
-               		bat "docker pull shaarv70/appium:latest"
+               		bat "docker pull shaarv70/appium:${env.BUILD_NUMBER}"
             }
         }
         stage('Run Tests') {
