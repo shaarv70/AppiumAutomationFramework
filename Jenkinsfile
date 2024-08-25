@@ -57,7 +57,10 @@ pipeline {
             steps {
                 script {
                     def service = params.SERVICE
-                    bat "docker-compose up --pull=always --scale ${service}=1"
+                    bat """
+                        export DEVICE_PORT=${DEVICE_PORT}
+                        docker-compose up --scale ${SERVICE}=1
+                    """
                	  }
 
                 script {
