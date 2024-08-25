@@ -48,20 +48,21 @@ pipeline {
             }
         }
 
- 		stage('Pre-pull Docker Image') {
+        stage('Pre-pull Docker Image') {
             steps {
-               		bat "docker pull shaarv70/appium:${env.BUILD_NUMBER}"
+                bat "docker pull shaarv70/appium:${env.BUILD_NUMBER}"
             }
         }
+
         stage('Run Tests') {
             steps {
                 script {
                     def service = params.SERVICE
                     bat """
                         set DEVICE_PORT=${DEVICE_PORT}
-                        docker-compose up --scale ${SERVICE}=1
+                        docker-compose up --scale ${service}=1
                     """
-               	  }
+                }
 
                 script {
                     def failedTestFound = fileExists("output/${params.SERVICE}/testng-failed.xml")
@@ -75,15 +76,12 @@ pipeline {
 
     post {
         always {
-           
-           			archiveArtifacts artifacts: 'extent-test-output/report.html', followSymlinks: false
-                    bat "docker-compose down --rmi all --volumes --remove-orphans"
-                    bat "docker system prune -f"
-                    bat "docker logout"
-                    bat "docker image rm shaarv70/appium:latest"
-                    bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
-                
-            	
-        		}
-    	}
+            archiveArtifacts artifacts: "output/${params.SERVICE}/report.html", followSymlinks: false
+            bat "docker-compose down --rmi all --volumes --remove-orphans"
+            bat "docker system prune -f"
+            bat "docker logout"
+            bat "docker image rm shaarv70/appium:latest"
+            bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
+        }
+    }
 }
