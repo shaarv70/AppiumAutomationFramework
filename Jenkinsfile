@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                bat "docker build --no-cache -t=shaarv70/appium:latest ."
+                bat "docker build -t=shaarv70/appium:latest ."
             }
         }
 
