@@ -5,11 +5,9 @@ pipeline {
     environment {
         COMPOSE_HTTP_TIMEOUT = 300
         DOCKER_CLI_TIMEOUT = 300  // Optional but recommended
+    	EMAIL_RECIPIENTS = 'arvindsharma50480@gmail.com, sharmaarvindsharma935@gmail.com'
     }
-    environment {
-    EMAIL_RECIPIENTS = 'arvindsharma50480@gmail.com, sharmaarvindsharma935@gmail.com'
-	}
-
+    
     parameters {
         choice(name: 'SERVICE', choices: ['Regression', 'Release'], description: 'Select the service to run')
         choice(name: 'DEVICE_PORT', choices: ['5555', '5557'], description: 'Select the device port')
