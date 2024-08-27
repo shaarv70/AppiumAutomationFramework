@@ -59,7 +59,7 @@ pipeline {
                 script {
                     def service = params.SERVICE
                     bat """
-                        set DEVICE_PORT=${DEVICE_PORT}
+                        set DEVICE_PORT=${params.DEVICE_PORT}
                         docker-compose up --scale ${service}=1
                     """
                 }
@@ -75,6 +75,34 @@ pipeline {
     }
 
     post {
+        success {
+            emailext (
+                to: 'recipient@example.com',
+                subject: "Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' Succeeded",
+                body: """
+                    <p>Good news, the pipeline succeeded!</p>
+                    <p>Job: ${env.JOB_NAME}</p>
+                    <p>Build Number: ${env.BUILD_NUMBER}</p>
+                    <p>Service: ${params.SERVICE}</p>
+                    <p>Check the details: ${env.BUILD_URL}</p>
+                """,
+                mimeType: 'text/html'
+            )
+        }
+        failure {
+            emailext (
+                to: 'recipient@example.com',
+                subject: "Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' Failed",
+                body: """
+                    <p>Unfortunately, the pipeline failed.</p>
+                    <p>Job: ${env.JOB_NAME}</p>
+                    <p>Build Number: ${env.BUILD_NUMBER}</p>
+                    <p>Service: ${params.SERVICE}</p>
+                    <p>Check the details: ${env.BUILD_URL}</p>
+                """,
+                mimeType: 'text/html'
+            )
+        }
         always {
             archiveArtifacts artifacts: "output/${params.SERVICE}/report.html", followSymlinks: false
             bat "docker-compose down --rmi all --volumes --remove-orphans"
