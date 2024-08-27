@@ -1,10 +1,14 @@
 pipeline {
+    
     agent any
 
     environment {
         COMPOSE_HTTP_TIMEOUT = 300
         DOCKER_CLI_TIMEOUT = 300  // Optional but recommended
     }
+    environment {
+    EMAIL_RECIPIENTS = 'arvindsharma50480@gmail.com, sharmaarvindsharma935@gmail.com'
+	}
 
     parameters {
         choice(name: 'SERVICE', choices: ['Regression', 'Release'], description: 'Select the service to run')
@@ -77,7 +81,7 @@ pipeline {
     post {
         success {
             emailext (
-                to: 'recipient@example.com',
+                to: "${EMAIL_RECIPIENTS}",
                 subject: "Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' Succeeded",
                 body: """
                     <p>Good news, the pipeline succeeded!</p>
@@ -91,7 +95,7 @@ pipeline {
         }
         failure {
             emailext (
-                to: 'recipient@example.com',
+                to: "${EMAIL_RECIPIENTS}",
                 subject: "Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' Failed",
                 body: """
                     <p>Unfortunately, the pipeline failed.</p>
