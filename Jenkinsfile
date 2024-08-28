@@ -77,6 +77,14 @@ pipeline {
     }
 
     post {
+		
+		always {
+            	  archiveArtifacts artifacts: "output/${params.SERVICE}/report.html", followSymlinks: false
+            	  bat "docker-compose down --rmi all --volumes --remove-orphans"
+            	  bat "docker system prune -f"
+            	  bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
+            	  bat "docker logout"
+               }
         success {
             emailext (
                 to: "${EMAIL_RECIPIENTS}",
@@ -105,12 +113,6 @@ pipeline {
                 mimeType: 'text/html'
             )
         }
-        always {
-            archiveArtifacts artifacts: "output/${params.SERVICE}/report.html", followSymlinks: false
-            bat "docker-compose down --rmi all --volumes --remove-orphans"
-            bat "docker system prune -f"
-            bat "docker image rm shaarv70/appium:${env.BUILD_NUMBER}"
-            bat "docker logout"
-        }
+       
     }
 }
