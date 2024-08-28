@@ -97,6 +97,7 @@ pipeline {
                     <p>Check the details: ${env.BUILD_URL}</p>
                 """,
                 mimeType: 'text/html',
+                attachmentsPattern: "output/${params.SERVICE}/report.html",
                 replyTo: 'arvindsharma50480@gmail.com',
     			from: 'arvindsharma50480@gmail.com'
             )
@@ -113,6 +114,7 @@ pipeline {
                     <p>Check the details: ${env.BUILD_URL}</p>
                 """,
                 mimeType: 'text/html',
+                attachmentsPattern: "output/${params.SERVICE}/report.html",
                 replyTo: 'arvindsharma50480@gmail.com',
     			from: 'arvindsharma50480@gmail.com'
             )
