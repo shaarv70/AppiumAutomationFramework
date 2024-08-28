@@ -5,7 +5,7 @@ pipeline {
     environment {
         COMPOSE_HTTP_TIMEOUT = 300
         DOCKER_CLI_TIMEOUT = 300  // Optional but recommended
-    	EMAIL_RECIPIENTS = 'arvindsharma50480@gmail.com,sharmaarvindsharma935@gmail.com'
+    	EMAIL_RECIPIENTS = 'sharmaarvindsharma935@gmail.com'
     }
     
     parameters {
@@ -96,7 +96,9 @@ pipeline {
                     <p>Service: ${params.SERVICE}</p>
                     <p>Check the details: ${env.BUILD_URL}</p>
                 """,
-                mimeType: 'text/html'
+                mimeType: 'text/html',
+                replyTo: 'arvindsharma50480@gmail.com',
+    			from: 'arvindsharma50480@gmail.com'
             )
         }
         failure {
@@ -110,7 +112,9 @@ pipeline {
                     <p>Service: ${params.SERVICE}</p>
                     <p>Check the details: ${env.BUILD_URL}</p>
                 """,
-                mimeType: 'text/html'
+                mimeType: 'text/html',
+                replyTo: 'arvindsharma50480@gmail.com',
+    			from: 'arvindsharma50480@gmail.com'
             )
         }
        
