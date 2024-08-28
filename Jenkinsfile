@@ -94,7 +94,9 @@ pipeline {
                     <p>Job: ${env.JOB_NAME}</p>
                     <p>Build Number: ${env.BUILD_NUMBER}</p>
                     <p>Service: ${params.SERVICE}</p>
+                    <p>Check the attached report for details. Please download the report, extract it, and open the HTML file in a web browser for the best viewing experience.</p>
                     <p>Check the details: ${env.BUILD_URL}</p>
+                    
                 """,
                 mimeType: 'text/html',
                 attachmentsPattern: "output/${params.SERVICE}/report.html",
@@ -111,6 +113,7 @@ pipeline {
                     <p>Job: ${env.JOB_NAME}</p>
                     <p>Build Number: ${env.BUILD_NUMBER}</p>
                     <p>Service: ${params.SERVICE}</p>
+                    <p>Check the attached report for details. Please download the report, extract it, and open the HTML file in a web browser for the best viewing experience.</p>
                     <p>Check the details: ${env.BUILD_URL}</p>
                 """,
                 mimeType: 'text/html',
